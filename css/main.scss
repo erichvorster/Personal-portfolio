@@ -3,6 +3,7 @@
   padding: 0px;
   box-sizing: border-box;
   overflow-x: hidden;
+  cursor: none;
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -16,9 +17,10 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   min-height: 8vh;
+  padding: 0em 1em;
   font-family: "Poppins", sans-serif;
 }
 
@@ -30,14 +32,26 @@ nav {
 }
 
 .nav-links {
+  position: absolute;
+  right: 0px;
+  height: 92vh;
+  top: 8vh;
+  background-color: yellow;
   display: flex;
-  width: 40%;
-  display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in;
+  z-index: 1;
+  font-size: 5em;
+  font-weight: 700;
 }
 
 .nav-links li {
   list-style: none;
+  opacity: 0;
 }
 
 .nav-links a {
@@ -47,10 +61,8 @@ nav {
   font-weight: bold;
   font-size: 14px;
 }
-
-.burger {
-  display: none;
-  cursor: pointer;
+.nav-active {
+  transform: translateX(0%);
 }
 
 .burger div {
@@ -59,42 +71,6 @@ nav {
   margin: 5px;
   background-color: black;
   transition: all 0.3s ease;
-}
-
-@media screen and(max-width:1024px) {
-  .nav-links {
-    width: 60%;
-  }
-}
-
-@media screen and(max-width:768px) {
-  .body {
-    overflow-x: hidden;
-  }
-  .nav-links {
-    position: absolute;
-    right: 0px;
-    height: 92vh;
-    top: 8vh;
-    background-color: yellow;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-  }
-
-  .nav-links li {
-    opacity: 0;
-  }
-  .burger {
-    display: block;
-  }
-
-  .nav-active {
-    transform: translateX(0%);
-  }
 }
 
 @keyframes navLinkFade {
@@ -140,7 +116,7 @@ nav {
 
 @media screen and(min-width:0px) {
   .hero__content {
-    margin-top: 5em;
+    margin-top: 4em;
 
     .hero__content--firstname,
     .hero__content--surname {
@@ -150,7 +126,7 @@ nav {
 }
 @media screen and(min-width:768px) {
   .hero__content {
-    margin-top: 5em;
+    margin-top: 4em;
 
     .hero__content--firstname,
     .hero__content--surname {
@@ -160,11 +136,65 @@ nav {
 }
 @media screen and(min-width:1024px) {
   .hero__content {
-    margin-top: 5em;
+    margin-top: 4em;
 
     .hero__content--firstname,
     .hero__content--surname {
       font-size: 12vw;
     }
   }
+}
+
+//Her0-animation
+
+.cursor {
+  position: fixed;
+  background: yellow;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: -80px 0 0 -20px;
+  will-change: transform;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+.shapes {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  .shape {
+    will-change: transform;
+    position: absolute;
+    border-radius: 50%;
+
+    $shapes: (
+      #fcfb04: 650px,
+      #fcc404: 440px,
+      #fbad3c: 270px,
+    );
+
+    @each $color, $size in $shapes {
+      &.shape-#{index($shapes, ($color $size))} {
+        background: $color;
+        width: $size;
+        height: $size;
+        margin: (-$size/2) 0 0 (-$size/2);
+      }
+    }
+  }
+}
+
+.hero__content {
+  mix-blend-mode: screen;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
 }
