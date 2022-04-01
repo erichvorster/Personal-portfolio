@@ -1,3 +1,10 @@
+$grey: #0f2830;
+$blue: #014751;
+$green: #00d37f;
+$mint: #aff8c8;
+$yellow: #ffeeb4;
+$purple: #d2c4fb;
+
 * {
   margin: 0px;
   padding: 0px;
@@ -7,6 +14,7 @@
 }
 body {
   font-family: "Poppins", sans-serif;
+  background-color: white;
 }
 
 .container {
@@ -25,7 +33,7 @@ nav {
 }
 
 .logo {
-  color: black;
+  color: $grey;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 22px;
@@ -36,7 +44,7 @@ nav {
   right: 0px;
   height: 92vh;
   top: 8vh;
-  background-color: yellow;
+  background-color: $green;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -52,6 +60,7 @@ nav {
 .nav-links li {
   list-style: none;
   opacity: 0;
+  color: $grey;
 }
 
 .nav-links a {
@@ -69,7 +78,7 @@ nav {
   width: 25px;
   height: 3px;
   margin: 5px;
-  background-color: black;
+  background-color: $grey;
   transition: all 0.3s ease;
 }
 
@@ -98,6 +107,7 @@ nav {
 
 .hero {
   height: 100vh;
+  background-color: $grey;
 
   .hero__content {
     padding: 4em 0px 4em 4em;
@@ -120,13 +130,18 @@ nav {
 
     .hero__content--firstname,
     .hero__content--surname {
-      font-size: 15vw;
+      font-size: 17vw;
+    }
+
+    .hero__content--firstname {
+      margin-top: 20%;
     }
   }
 }
 @media screen and(min-width:768px) {
   .hero__content {
     margin-top: 4em;
+    display: block;
 
     .hero__content--firstname,
     .hero__content--surname {
@@ -137,6 +152,7 @@ nav {
 @media screen and(min-width:1024px) {
   .hero__content {
     margin-top: 4em;
+    display: block;
 
     .hero__content--firstname,
     .hero__content--surname {
@@ -149,7 +165,7 @@ nav {
 
 .cursor {
   position: fixed;
-  background: yellow;
+  background: $purple;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -162,7 +178,7 @@ nav {
 
 .shapes {
   position: relative;
-  background-color: black;
+  background-color: $grey;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -173,9 +189,9 @@ nav {
     border-radius: 50%;
 
     $shapes: (
-      #fcfb04: 650px,
-      #fcc404: 440px,
-      #fbad3c: 270px,
+      $green: 450px,
+      $purple: 240px,
+      $blue: 70px,
     );
 
     @each $color, $size in $shapes {
@@ -197,4 +213,93 @@ nav {
   left: 0;
   height: 100vh;
   width: 100vw;
+}
+
+
+//SLIDER
+
+.full-page{
+  width:100%;
+  height: 100vh;
+}
+
+.social-media{
+  position: fixed;
+  left:15vh;
+  bottom:10vh;
+}
+
+.social-media ul {
+  margin:0;
+}
+
+.social-media ul li{
+  display: inline;
+  margin-right:20px;
+}
+
+.social-media ul li {
+  display: inline;
+  margin-right:20px;
+}
+
+.social-media ul li a{
+  color:#fff;
+  font-size: 13px;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+
+.social-media ul li a:hover{
+  color: $green;
+}
+
+.main-title{
+  position: fixed;
+  transform: translate(-50%);
+  left:50%;
+  top: 20vh;
+  text-align: center;
+  color:$grey;
+  font-size: 120px;
+  font-style: italic;
+}
+
+.main-title h2::after{
+  content: 'selectedwork';
+  color:transparent;
+  -webkit-text-stroke:.2px #444;
+  left:0;
+  top:20px;
+  position: absolute;
+}
+
+.swiper-container{
+  width:100;
+  transform: translateY(-50%);
+  top:50%;
+}
+
+.swiper-slide{
+  width:50%;
+}
+
+.swipper-wrapper{
+  transition-delay:  .5s;
+}
+
+.port-img img{
+  width:100%;
+  overflow:hidden;
+}
+
+.port-img::after{
+  content:'';
+  width:100%;
+  height: calc(100% - 4px);
+  background-image:  -moz-linear-gradient;
+}
+
+.port_img img{
+  object-fit:contain;
 }

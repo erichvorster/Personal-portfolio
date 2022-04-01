@@ -7,10 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!--Swiper css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.css" integrity="sha512-g0BdMh4zEp4DuzHdoenUitpFx195QZfSFq5sd04kXZLwz5F9pUlGqwk+1jlvBBFGOnTCt0b5FsmQyl+5v2fxWw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/main.css">
     <title>Erich Vorster</title>
 </head>
 <body>
+
 
 <!--NAV-->
      <nav>
@@ -29,6 +32,62 @@
              <div class="line3"></div>
          </div>
      </nav>
+
+
+<!--CAROUSEL-->
+
+<div class="full-page">
+
+    <div class="main-title">
+        <h2>SelectedWork</h2>
+    </div>
+   
+    <div class="social-media">
+        <ul>
+            <li><a href="#">FB</a></li>
+            <li><a href="#">IG</a></li>
+            <li><a href="#">GH</a></li>
+        </ul>
+    </div>
+
+    <!--Slider Section-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!--Slide-1-->
+            <div class="swiper-slide">
+                 <div class="port-text">
+                     <h4><span class="reveal">Amethys</span></h4>
+                 </div>
+                 <div class="port-img">
+                    <img src="./assets/project1.jpg" alt="">
+                </div>
+            </div>
+
+            <!--Slide-1-->
+            <div class="swiper-slide">
+                <div class="port-text">
+                    <h4><span class="reveal">Amethys</span></h4>
+                </div>
+                <div class="port-img">
+                   <img src="./assets/project2.jpg" alt="">
+               </div>
+           </div>
+
+           <!--Slide-1-->
+           <div class="swiper-slide">
+              <div class="port-text">
+                 <h4><span class="reveal">Amethys</span></h4>
+              </div>
+              <div class="port-img">
+                 <img src="./assets/project3.jpg" alt="">
+              </div>
+           </div>
+           
+        </div>
+    </div>
+</div>
+
+
 
 <!--HERO-->
 
@@ -54,8 +113,13 @@
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima porro, reprehenderit ea, labore nisi laborum asperiores voluptatem ipsam tenetur rerum, sequi aperiam corrupti pariatur itaque error hic mollitia? Blanditiis animi culpa praesentium excepturi, odit, soluta at doloribus quae officiis hic fugit delectus tenetur nulla pariatur a placeat natus id dolorem.</p>
 </div>
 
-
+    
+<!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!--GSAP-->  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<!--SLIDER-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js" integrity="sha512-WlN87oHzYKO5YOmINf1+pSkbt4gm+lOro4fiSTCjII4ykJe/ycHKIaa9b2l9OMkbqEA4NxwTXAGFjSXgqEh19w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./app.js"></script>
 </body>
 </html>

@@ -9,6 +9,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: white;
 }
 
 .container {
@@ -33,7 +34,7 @@ nav {
 }
 
 .logo {
-  color: black;
+  color: #0f2830;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 22px;
@@ -44,7 +45,7 @@ nav {
   right: 0px;
   height: 92vh;
   top: 8vh;
-  background-color: yellow;
+  background-color: #00d37f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,6 +73,7 @@ nav {
 .nav-links li {
   list-style: none;
   opacity: 0;
+  color: #0f2830;
 }
 
 .nav-links a {
@@ -91,7 +93,7 @@ nav {
   width: 25px;
   height: 3px;
   margin: 5px;
-  background-color: black;
+  background-color: #0f2830;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -138,6 +140,7 @@ nav {
 
 .hero {
   height: 100vh;
+  background-color: #0f2830;
 }
 
 .hero .hero__content {
@@ -160,13 +163,17 @@ nav {
   }
   .hero__content .hero__content--firstname,
   .hero__content .hero__content--surname {
-    font-size: 15vw;
+    font-size: 17vw;
+  }
+  .hero__content .hero__content--firstname {
+    margin-top: 20%;
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero__content {
     margin-top: 4em;
+    display: block;
   }
   .hero__content .hero__content--firstname,
   .hero__content .hero__content--surname {
@@ -177,6 +184,7 @@ nav {
 @media screen and (min-width: 1024px) {
   .hero__content {
     margin-top: 4em;
+    display: block;
   }
   .hero__content .hero__content--firstname,
   .hero__content .hero__content--surname {
@@ -186,7 +194,7 @@ nav {
 
 .cursor {
   position: fixed;
-  background: yellow;
+  background: #d2c4fb;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -202,7 +210,7 @@ nav {
 
 .shapes {
   position: relative;
-  background-color: black;
+  background-color: #0f2830;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -215,24 +223,24 @@ nav {
 }
 
 .shapes .shape.shape-1 {
-  background: #fcfb04;
-  width: 650px;
-  height: 650px;
-  margin: -325px 0 0 -325px;
+  background: #00d37f;
+  width: 450px;
+  height: 450px;
+  margin: -225px 0 0 -225px;
 }
 
 .shapes .shape.shape-2 {
-  background: #fcc404;
-  width: 440px;
-  height: 440px;
-  margin: -220px 0 0 -220px;
+  background: #d2c4fb;
+  width: 240px;
+  height: 240px;
+  margin: -120px 0 0 -120px;
 }
 
 .shapes .shape.shape-3 {
-  background: #fbad3c;
-  width: 270px;
-  height: 270px;
-  margin: -135px 0 0 -135px;
+  background: #014751;
+  width: 70px;
+  height: 70px;
+  margin: -35px 0 0 -35px;
 }
 
 .hero__content {
@@ -243,5 +251,96 @@ nav {
   left: 0;
   height: 100vh;
   width: 100vw;
+}
+
+.full-page {
+  width: 100%;
+  height: 100vh;
+}
+
+.social-media {
+  position: fixed;
+  left: 15vh;
+  bottom: 10vh;
+}
+
+.social-media ul {
+  margin: 0;
+}
+
+.social-media ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.social-media ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.social-media ul li a {
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.social-media ul li a:hover {
+  color: #00d37f;
+}
+
+.main-title {
+  position: fixed;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  left: 50%;
+  top: 20vh;
+  text-align: center;
+  color: #0f2830;
+  font-size: 120px;
+  font-style: italic;
+}
+
+.main-title h2::after {
+  content: 'selectedwork';
+  color: transparent;
+  -webkit-text-stroke: .2px #444;
+  left: 0;
+  top: 20px;
+  position: absolute;
+}
+
+.swiper-container {
+  width: 100;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+}
+
+.swiper-slide {
+  width: 50%;
+}
+
+.swipper-wrapper {
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
+}
+
+.port-img img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.port-img::after {
+  content: '';
+  width: 100%;
+  height: calc(100% - 4px);
+  background-image: -moz-linear-gradient;
+}
+
+.port_img img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 /*# sourceMappingURL=main.css.map */
