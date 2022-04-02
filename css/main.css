@@ -4,18 +4,18 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow-x: hidden;
-  cursor: none;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: white;
+  background-color: #0f2830;
 }
 
 .container {
   padding: 0 2em;
   margin: 0 auto;
   max-width: 90rem;
+  margin: 10em 0;
 }
 
 nav {
@@ -34,7 +34,7 @@ nav {
 }
 
 .logo {
-  color: #0f2830;
+  color: #00d37f;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 22px;
@@ -73,7 +73,7 @@ nav {
 .nav-links li {
   list-style: none;
   opacity: 0;
-  color: #0f2830;
+  color: #014751;
 }
 
 .nav-links a {
@@ -93,7 +93,7 @@ nav {
   width: 25px;
   height: 3px;
   margin: 5px;
-  background-color: #0f2830;
+  background-color: #00d37f;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -144,17 +144,67 @@ nav {
 }
 
 .hero .hero__content {
-  padding: 4em 0px 4em 4em;
+  overflow-y: hidden;
+  /* CSS */
 }
 
 .hero .hero__content .hero__content--firstname,
 .hero .hero__content .hero__content--surname {
   line-height: 90%;
   overflow-y: hidden;
+  color: #00d37f;
 }
 
 .hero .hero__content .hero__content--paragraph {
   font-size: 3vw;
+  color: white;
+  padding: 1rem 0;
+}
+
+.hero .hero__content p {
+  color: white;
+}
+
+.hero .hero__content .button-24 {
+  background: #00d37f;
+  border: 1px solid #00d37f;
+  border-radius: 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+          box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  vertical-align: middle;
+  margin: 1em 0;
+}
+
+.hero .hero__content .button-24:hover,
+.hero .hero__content .button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #00d37f;
+}
+
+.hero .hero__content .button-24:active {
+  opacity: .5;
 }
 
 @media screen and (min-width: 0px) {
@@ -192,155 +242,77 @@ nav {
   }
 }
 
-.cursor {
-  position: fixed;
-  background: #d2c4fb;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin: -80px 0 0 -20px;
-  will-change: transform;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: none;
-  z-index: 10000;
+.about__grid {
+  margin: 2em 0;
 }
 
-.shapes {
-  position: relative;
-  background-color: #0f2830;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-}
-
-.shapes .shape {
-  will-change: transform;
-  position: absolute;
-  border-radius: 50%;
-}
-
-.shapes .shape.shape-1 {
-  background: #00d37f;
-  width: 450px;
-  height: 450px;
-  margin: -225px 0 0 -225px;
-}
-
-.shapes .shape.shape-2 {
-  background: #d2c4fb;
-  width: 240px;
-  height: 240px;
-  margin: -120px 0 0 -120px;
-}
-
-.shapes .shape.shape-3 {
-  background: #014751;
-  width: 70px;
-  height: 70px;
-  margin: -35px 0 0 -35px;
-}
-
-.hero__content {
-  mix-blend-mode: screen;
-  background: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-}
-
-.full-page {
-  width: 100%;
-  height: 100vh;
-}
-
-.social-media {
-  position: fixed;
-  left: 15vh;
-  bottom: 10vh;
-}
-
-.social-media ul {
-  margin: 0;
-}
-
-.social-media ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-.social-media ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-.social-media ul li a {
-  color: #fff;
-  font-size: 13px;
-  text-decoration: none;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.social-media ul li a:hover {
+.about__header {
+  padding: 1em 0;
   color: #00d37f;
+  position: relative;
 }
 
-.main-title {
-  position: fixed;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-  left: 50%;
-  top: 20vh;
+.about__content p {
+  padding: .5em 0;
+  color: white;
+}
+
+.about__img {
+  height: 600px;
+  width: 100%;
   text-align: center;
-  color: #0f2830;
-  font-size: 120px;
-  font-style: italic;
+  overflow-y: hidden;
 }
 
-.main-title h2::after {
-  content: 'selectedwork';
-  color: transparent;
-  -webkit-text-stroke: .2px #444;
-  left: 0;
-  top: 20px;
-  position: absolute;
-}
-
-.swiper-container {
-  width: 100;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  top: 50%;
-}
-
-.swiper-slide {
-  width: 50%;
-}
-
-.swipper-wrapper {
-  -webkit-transition-delay: .5s;
-          transition-delay: .5s;
-}
-
-.port-img img {
+.about__img img {
+  height: 100%;
   width: 100%;
-  overflow: hidden;
+  margin: 3em 0;
+  border-radius: 5px;
 }
 
-.port-img::after {
-  content: '';
-  width: 100%;
-  height: calc(100% - 4px);
-  background-image: -moz-linear-gradient;
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.port_img img {
-  -o-object-fit: contain;
-     object-fit: contain;
+.projects h3 {
+  color: #00d37f;
+  margin: 1em 0;
+}
+
+.project {
+  color: white;
+  min-height: 300px;
+  max-width: 300px;
+  border: 2px solid #014751;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.project h4 {
+  color: #ffeeb4;
+}
+
+.project:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0px 10px 20px, rgba(0, 0, 0, 0.6) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.6) 0px 10px 20px, rgba(0, 0, 0, 0.6) 0px 6px 6px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */
