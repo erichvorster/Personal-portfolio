@@ -20,13 +20,13 @@ $xl:1200px;
 }
 body {
   font-family: "Poppins", sans-serif;
-  background-color: $grey;
+  background-color: #0f2830;
 }
 
 .container {
-  padding: 0 2em;
+  padding: 0 10em;
   margin: 0 auto;
-  max-width:80rem;
+  max-width: 90rem;
 }
 
 nav {
@@ -34,9 +34,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   min-height: 8vh;
-  padding: 0em 1em;
   font-family: "Poppins", sans-serif;
-  margin-top:1rem;
+  padding: 1.5rem 4rem;
 }
 
 .logo {
@@ -47,46 +46,72 @@ nav {
 }
 
 .nav-links {
-  position: absolute;
-  right: 0px;
-  height: 92vh;
-  top: 8vh;
-  background-color: $green;
   display: flex;
-  flex-direction: column;
+  width: 40%;
+  display: flex;
   justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  transform: translateX(100%);
-  transition: transform 0.5s ease-in;
-  z-index: 1;
-  font-size: 5em;
-  font-weight: 700;
+  color:$green;
 }
 
 .nav-links li {
   list-style: none;
-  opacity: 0;
-  color: $blue;
 }
 
 .nav-links a {
-  color: white;
+  color: $yellow;
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 14px;
 }
-.nav-active {
-  transform: translateX(0%);
+
+.burger {
+  display: none;
+  cursor: pointer;
 }
 
 .burger div {
   width: 25px;
   height: 3px;
   margin: 5px;
-  background-color: $green;
+  background-color:$yellow;
   transition: all 0.3s ease;
+}
+
+@media screen and(max-width:1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and(max-width:768px) {
+  .body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
 }
 
 @keyframes navLinkFade {
@@ -109,49 +134,36 @@ nav {
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
-
-
-@media screen and (min-width:$sm){
-  
-  }
-
-@media screen and (min-width:$md){
-  
-  }
-
-@media screen and (min-width:$lg){
-  nav{
-    margin: 0 3rem;
-  }
-}
 //HERO
 
 .hero {
   height: 80vh;
   background-color: $grey;
-  margin-top:10rem;
+  margin-top:5rem;
   max-width: 50rem;
   
 
   .hero__content {
     overflow-y: hidden;
 
-    .hero__content--firstname,
-    .hero__content--surname {
-      font-size:4rem;
+    .hero__content--firstname{
+      font-size:5rem;
       line-height: 4rem;
       overflow-y: hidden;
       color:$green;
-      letter-spacing:0.8rem;
-      
+      padding:1rem 0 0 0;
     }
 
-    .hero__content--paragraph {
-      font-size: 1.7rem;
+    .hero__content--header{
+      font-size: 4rem;
       color:$yellow;
-      padding:1rem 0;
-      line-height: 2rem;
-      letter-spacing: 0.2rem;
+      padding:2rem 0;
+      line-height: 5rem;
+      max-width: 60rem;
+    }
+    .hero__content--paragraph{
+      color:$yellow;
+      max-width:30rem;
     }
 
     p{
@@ -162,19 +174,20 @@ nav {
 
 
 .button-24 {
-  background: $green;
-  border: 1px solid $green;
+  background: $grey;
+  border: 2px solid $green;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
   box-sizing: border-box;
-  color: $blue;
+  color: $green;
   cursor: pointer;
   display: inline-block;
   font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 300;
   line-height: 16px;
-  min-height: 40px;
+  width:250px;
+  min-height: 50px;
   outline: 0;
   padding: 12px 14px;
   text-align: center;
@@ -184,7 +197,7 @@ nav {
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: middle;
-  margin:1em 0;
+  margin:3rem 0;
 }
 
 .button-24:hover,
@@ -241,6 +254,16 @@ nav {
   color:white;
 }
 
+.technologies__container{
+  display: flex;
+  padding:20px 0px;
+  color:white;
+}
+
+.technologies-1{
+  margin-right: 40px;
+}
+
 
 @media screen and (min-width:$sm){
   .about__grid{
@@ -256,50 +279,6 @@ nav {
 @media screen and (min-width:$lg){
   
 }
-
-
-//TECHNOLOGIES
-
-.technologies{
-  max-width: 50rem;
-  
-  margin-left:7rem;
-}
-
-.technology__content{
-
-
-  h3{
-  font-size: 2rem;
-  display: inline;
-  border-bottom: 2px solid $yellow;
-  color:$green;
-  }
-  p{
-    margin-top:3rem;
-    color:white;
-  }
-}
-
-.technology__icons{
-
-  ul{
-    display: flex;
-    width:100%;
-    justify-content: space-around;
-    margin:3rem 0;
-    
-    li{
-
-
-      i{
-        color:white;
-        font-size:3rem;
-      }
-    }
-  }
-}
-
 
 
 //PROJECTS
@@ -560,9 +539,9 @@ form .icons a{
 
 .socail{
   position:fixed;
-  bottom:5rem;
+  bottom:6rem;
   left:1rem;
-
+  
 }
 
 .socails li{
@@ -571,7 +550,8 @@ form .icons a{
   width:3rem;
   position: relative;
   overflow: hidden;
-  margin:1rem 0;
+  margin:0.5rem 0;
+  display:none;
 
   i{
     position:absolute;
@@ -579,5 +559,51 @@ form .icons a{
     left:1rem;
     font-size: 1.5rem;
     color:$purple;
+    transition: all 0.2s ease;
+  }
+  i:hover{
+    
+    transform: translateY(-5px);
+    color:#6e5494;;
+  }
+}
+
+.line{
+  position: fixed;
+  height:80px;
+  width:2px;
+  background-color: #6e5494;
+  bottom:0rem;
+  left:2.5rem;
+}
+.line2{
+  position: fixed;
+  height:80px;
+  width:2px;
+  background-color: #6e5494;
+  bottom:0rem;
+  right:2.5rem;
+}
+
+.email{
+  transform: rotate(90deg);
+  position: fixed;
+  background-color: #6e5494;
+  bottom:13rem;
+  right:-3.8rem;
+  background-color: transparent;
+  color:$purple;
+  transition: all 0.2s ease;
+}
+.email:hover{
+  transform: translateY(-5px);
+    color:#6e5494;;
+    transform: rotate(90deg);
+}
+
+
+@media (min-width: $lg){
+  .socails li{
+    display: block;
   }
 }
