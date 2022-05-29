@@ -11,6 +11,17 @@ body {
   background-color: #0f2830;
 }
 
+body::-webkit-scrollbar {
+  background-color: #0f2830;
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #d2c4fb;
+  width: 5px;
+  border-radius: 20px;
+}
+
 .container {
   padding: 0 10em;
   margin: 0 auto;
@@ -190,8 +201,9 @@ nav {
 }
 
 .hero .hero__content .hero__content--paragraph {
-  color: #ffeeb4;
+  color: white;
   max-width: 30rem;
+  line-height: 1.8rem;
 }
 
 .hero .hero__content p {
@@ -254,8 +266,16 @@ nav {
 }
 
 .about__grid {
-  max-width: 50rem;
-  margin-bottom: 15rem;
+  max-width: 55rem;
+  margin-top: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 5rem;
 }
 
 .about__header {
@@ -269,6 +289,7 @@ nav {
 .about__content p {
   margin-top: 3rem;
   color: white;
+  line-height: 1.8rem;
 }
 
 .technologies__container {
@@ -280,7 +301,44 @@ nav {
 }
 
 .technologies-1 {
+  line-height: 1.8rem;
+}
+
+.technologies-1 ul {
+  list-style-type: circle #ffeeb4;
+  list-style-position: inside;
+}
+
+.technologies-1 ul ::marker {
+  color: #ffeeb4;
+}
+
+.technologies-1 ul li span {
+  position: relative;
+  left: -10px;
+  font-size: 0.8rem;
+}
+
+.technologies-2 {
   margin-right: 40px;
+  line-height: 1.8rem;
+  margin-left: 40px;
+}
+
+.technologies-2 ul {
+  color: white;
+  list-style-type: circle #ffeeb4;
+  list-style-position: inside;
+}
+
+.technologies-2 ul ::marker {
+  color: #ffeeb4;
+}
+
+.technologies-2 ul li span {
+  position: relative;
+  left: -10px;
+  font-size: 0.8rem;
 }
 
 @media screen and (min-width: 576px) {
@@ -297,7 +355,7 @@ nav {
 
 .project__title {
   text-align: center;
-  margin-top: 15rem;
+  margin-top: 10rem;
   margin-bottom: 3rem;
   overflow: hidden;
 }
@@ -382,7 +440,7 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  list-style-type: circle white;
+  list-style-type: circle #ffeeb4;
   list-style-position: inside;
 }
 

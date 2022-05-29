@@ -23,10 +23,23 @@ body {
   background-color: #0f2830;
 }
 
+body::-webkit-scrollbar{
+  background-color:$grey;
+  width:5px;
+  
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color:$purple;
+  width:5px;
+  border-radius:20px;
+};
+
 .container {
   padding: 0 10em;
   margin: 0 auto;
   max-width: 90rem;
+  overflow: hidden;
 }
 
 nav {
@@ -162,8 +175,9 @@ nav {
       max-width: 60rem;
     }
     .hero__content--paragraph{
-      color:$yellow;
+      color:white;
       max-width:30rem;
+      line-height: 1.8rem;
     }
 
     p{
@@ -232,8 +246,12 @@ nav {
 
 //ABOUT
 .about__grid{
-  max-width: 50rem;
-  margin-bottom:15rem;
+  max-width:55rem;
+  margin-top:10rem;
+  display: flex;
+  flex-direction: column;
+  padding-left:5rem;
+  
 }
 
 .about__content{
@@ -252,6 +270,7 @@ nav {
 .about__content p{
   margin-top: 3rem;
   color:white;
+  line-height:1.8rem;
 }
 
 .technologies__container{
@@ -261,7 +280,44 @@ nav {
 }
 
 .technologies-1{
+  line-height: 1.8rem;
+  ul{
+
+    list-style-type: circle $yellow;
+    list-style-position: inside;
+      
+    ::marker{
+      color:$yellow;
+    }
+    li span{
+      position: relative;
+      left:-10px;
+      font-size: 0.8rem;
+    }
+}
+
+
+}
+
+.technologies-2{
   margin-right: 40px;
+  line-height: 1.8rem;
+  margin-left:40px;
+
+  ul{
+    color:white;
+    list-style-type: circle $yellow;
+    list-style-position: inside;
+      
+    ::marker{
+      color:$yellow;
+    }
+    li span{
+      position: relative;
+      left:-10px;
+      font-size: 0.8rem;
+    }
+} 
 }
 
 
@@ -285,7 +341,7 @@ nav {
 
 .project__title{
   text-align: center;
-  margin-top:15rem;
+  margin-top:10rem;
   margin-bottom: 3rem;
   overflow: hidden;
   h3{
@@ -355,7 +411,7 @@ nav {
   ul{
     display: flex;
     justify-content: space-between;
-    list-style-type: circle white;
+    list-style-type: circle $yellow;
     list-style-position: inside;
     
     ::marker{

@@ -116,3 +116,21 @@ gsap.from(".email", {
   ease: "power4",
   delay: 2,
 });
+
+gsap.from(".about__grid", {
+  scrollTrigger: ".about__grid",
+  y: 20,
+  opacity: 0,
+  duration: 0.8,
+  delay: 0.4,
+  ease: "power4",
+});
+
+gsap.from(".project", {
+  scrollTrigger: ".project",
+  y: 20,
+  opacity: 0,
+  duration: 0.8,
+  delay: 0.4,
+  ease: "power4",
+});
