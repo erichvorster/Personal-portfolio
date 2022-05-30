@@ -18,6 +18,16 @@ $xl:1200px;
   overflow-x: hidden;
   
 }
+.number-span{
+  font-family: 'Inconsolata', sans-serif;
+  color:$yellow;
+  font-size: 16px;
+}
+.number-span-header{
+  font-family: 'Inconsolata', sans-serif;
+  color:$yellow;
+  font-size: 30px;
+}
 body {
   font-family: "Poppins", sans-serif;
   background-color: #0f2830;
@@ -25,7 +35,7 @@ body {
 
 body::-webkit-scrollbar{
   background-color:$grey;
-  width:5px;
+  width:8px;
   
 }
 
@@ -35,8 +45,10 @@ body::-webkit-scrollbar-thumb {
   border-radius:20px;
 };
 
+
+
 .container {
-  padding: 0 10em;
+  padding: 0 2rem;
   margin: 0 auto;
   max-width: 90rem;
   overflow: hidden;
@@ -66,8 +78,13 @@ nav {
   color:$green;
 }
 
+
 .nav-links li {
   list-style: none;
+}
+.nav-links li:hover {
+  color:$yellow;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-links a {
@@ -160,19 +177,15 @@ nav {
     overflow-y: hidden;
 
     .hero__content--firstname{
-      font-size:5rem;
-      line-height: 4rem;
       overflow-y: hidden;
       color:$green;
-      padding:1rem 0 0 0;
+     
     }
 
     .hero__content--header{
-      font-size: 4rem;
       color:$yellow;
-      padding:2rem 0;
-      line-height: 5rem;
       max-width: 60rem;
+      overflow: hidden;
     }
     .hero__content--paragraph{
       color:white;
@@ -196,7 +209,6 @@ nav {
   color: $green;
   cursor: pointer;
   display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 16px;
@@ -211,7 +223,7 @@ nav {
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: middle;
-  margin:3rem 0;
+  margin:3rem 0 0 0;
 }
 
 .button-24:hover,
@@ -227,45 +239,155 @@ nav {
   }
 }
 
-@media screen and (min-width:$sm){
+@media screen and (min-width:0px){
+
+  .container{
+    padding: 0 1rem;
+  }
   .hero{
     margin-left: 2rem;
+    max-width: 25rem;
+    
+  }
+  .hero__content--firstname{
+    font-size: 8vw;
+  }
+  .hero__content--header{
+    font-size: 6vw;
+  }
+
+  .hero__content--paragraph{
+    padding-top:1rem;
   }
 }
-@media screen and (min-width:$md){
+
+
+@media screen and (min-width:$sm){
+
+  .container{
+   
+  }
   .hero{
-    margin-left: 4rem;
+    max-width: 40rem;
+    
+  }
+  .hero__content--firstname{
+    font-size: 8vw;
+  }
+}
+
+@media screen and (min-width:$md){
+  .container{
+    padding: 0 4em;
+  }
+
+  .hero{
+  
+  }
+
+  .hero__content--firstname{
+    padding:0.5rem 0 0.5rem 0;
+    line-height: 3rem;
+    font-size: 8vw;
+  }
+
+  .hero__content--header{
+    padding:1rem 0 0.5rem 0;
+    line-height: 4rem;
+    font-size: 6vw;
+  }
+  .hero__content--paragraph{
+    padding:1rem 0 0 0 ;
+    line-height: 4rem;
   }
 
 }
 @media screen and (min-width:$lg){
-  
+  .container{
+    padding: 0 8em;
+  }
+  .hero{
+    max-width: 80rem;
+    
+  }
+
+  .hero__content--firstname{
+    font-size: 7vw;
+    line-height: 5rem;
+  }
+  .hero__content--header{
+    font-size: 6vw;
+    line-height:5rem;
+  }
+}
+@media screen and (min-width:$xl){
+  .container{
+    padding: 0 10em;
+  }
+  .hero{
+    max-width: 100rem;
+  }
+
+  .hero__content--firstname{
+    font-size: 7vw;
+    line-height: 6rem;
+  }
+  .hero__content--header{
+    font-size: 6vw;
+    line-height: 6rem;
+  }
 }
 
 
 
 //ABOUT
 .about__grid{
-  max-width:55rem;
-  margin-top:10rem;
+  margin:10rem auto 0 0;
+  padding:0 2rem;
+  justify-content: center;
   display: flex;
   flex-direction: column;
-  padding-left:5rem;
-  
 }
 
-.about__content{
-  
+.about__col--1{
+  margin:6rem auto 0 auto;
+  color:white;
+  padding: 0 3rem;
+}
+.about__col--2{
+  margin:6rem auto 0 auto;
+  color:white;
+}
+
+.about__image{
+  height:22rem;
+  width:22rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+  url(../assets/erich.jpg);
+  background-size: cover;
+  margin:0 0 1.5rem 0;
+  border-radius: 7px;
+  border: 2px solid $yellow;
 }
 
 .about__header{
+  display:flex;
+
+  h3{
   font-size: 2rem;
   display: inline;
-  border-bottom: 2px solid $yellow;
   color:$green;
   position: relative;
-}
+  }
 
+  .title__line{
+     height:1px;
+     min-width:7rem;
+     max-width:12rem;
+     background-color:$yellow;
+     margin:25px 0px 0px 30px;
+  }
+}
 
 .about__content p{
   margin-top: 3rem;
@@ -273,10 +395,12 @@ nav {
   line-height:1.8rem;
 }
 
+
 .technologies__container{
   display: flex;
-  padding:20px 0px;
-  color:white;
+
+  color:$green;
+  margin: 0 auto;
 }
 
 .technologies-1{
@@ -300,12 +424,11 @@ nav {
 }
 
 .technologies-2{
-  margin-right: 40px;
   line-height: 1.8rem;
-  margin-left:40px;
+  margin-left:80px;
 
   ul{
-    color:white;
+    color:$green;
     list-style-type: circle $yellow;
     list-style-position: inside;
       
@@ -322,54 +445,78 @@ nav {
 
 
 @media screen and (min-width:$sm){
-  .about__grid{
-    margin-left: 2rem;
-  }
+  
 }
 @media screen and (min-width:$md){
-  .about__grid{
-    margin-left: 4rem;
+  .about__content{
+    max-width:28rem;
+    padding:30px;
   }
-
+  .grid__col--2{
+    margin-left: 2rem;
+  }
+  .about__grid{
+    flex-direction: row;
+  }
+  .about__image{
+    height:10rem;
+    width:10rem;
+  
+  }
 }
 @media screen and (min-width:$lg){
   
+
+  .about__content{
+    max-width:28rem;
+    padding:30px;
+  }
+
+
+  .grid__col--2{
+    
+  }
+
+  .about__image{
+    height:15rem;
+    width:15rem;
+  
+  }
 }
 
 
 //PROJECTS
 
 .project__title{
-  text-align: center;
-  margin-top:10rem;
+  margin-top:12rem;
   margin-bottom: 3rem;
   overflow: hidden;
+  display: flex;
+
   h3{
     color:$green;
     font-size: 2rem;
     display: inline;
-    border-bottom: 2px solid $yellow;
-    
+    padding-left:15px;
   }
+  .title__line{
+    height:1px;
+    
+    background-color:$yellow;
+    margin:25px 0px 0px 30px;
+ }
+
+
 }
 .projects{
   display:flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   
-
-   h3{
-    color:$green;
-    margin:1em 0;
-    
-  }
 }
 
 .project{
   color:white;
   min-height: 300px;
-  min-width:200px;
+  min-width:500px;
   border:2px solid $blue;
   border-radius: 5px;
   padding:1.5em;
@@ -463,32 +610,37 @@ nav {
 //CONTACT
 
 form{
-  background:$green;
-  width: 40rem;
-  margin: 2rem auto;
+  background:$blue;
+  width: 60rem;
+  margin: 0 auto 4rem auto;
   max-width:97%;
   border-radius: 4px;
   padding:55px 30px;
 }
 .title{
-  margin-top:15rem;
   overflow:hidden;
   text-align: center;
   display:flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  margin: 15rem auto 4rem auto;
+  width:60rem;
+
+  h2{
+    color:$green;
+    font-size: 2rem;
+    display: inline;
+    
+}
+.title__line{
+  height:1px;
+  width:17rem;
+  background-color:$yellow;
+  margin:25px 0px 0px 30px;
 }
 
-.title h2{
-  color:$green;
-  font-size: 2rem;
-  display: inline;
-  border-bottom: 2px solid $yellow;
 }
+
 .title p{
   color:white;
-  margin-top:1rem;
   margin-bottom:2rem;
   max-width:30rem;
 }
@@ -514,7 +666,7 @@ form label{
 
 form .half .item input {
   border-radius: 4px;
-  border:1px solid white;
+  border:2px solid $grey;
   outline:0;
   padding: 16px;
   width:100%;
@@ -532,7 +684,7 @@ form .full{
 form .full textarea{
   background: transparent;
   border-radius: 4px;
-  border: 1px solid white;
+  border: 2px solid $grey;
   outline: 0;
   padding:12px 16px;
   width:100%;
@@ -547,10 +699,10 @@ form .action{
 form .action input{
   background: transparent;
   border-radius: 4px;
-  border:1px solid white;
+  border:2px solid $grey;
   cursor: pointer;
   font-size:13px;
-  font-weight: 600;
+  font-weight: 400;
   height:44px;
   letter-spacing: 3px;
   outline:0;
@@ -559,20 +711,24 @@ form .action input{
 }
 
 form .action input[type="submit"]{
-  background:white;
-
+  background:$grey;
+  color:$green;
+  border: 2px solid $green;
+  border-radius: 6px;
+  width:150px;
 }
 
-form .icons a{
-  border: 1px solid white;
-  border-radius: 50%;
-  line-height: 36px;
-  text-align: center;
-  font-weight: 600;
-  width: 38px;
-  margin-right:10px;
-  color: black;
+form .action input[type="reset"]{
+  background:$grey;
+  color:$green;
+  border: 2px solid $green;
+  border-radius: 6px;
+  width:150px;
 }
+
+
+
+
 
 @media (max-width: 768px){
   form .half{
@@ -631,6 +787,7 @@ form .icons a{
   background-color: #6e5494;
   bottom:0rem;
   left:2.5rem;
+  display: none;
 }
 .line2{
   position: fixed;
@@ -639,6 +796,7 @@ form .icons a{
   background-color: #6e5494;
   bottom:0rem;
   right:2.5rem;
+  display: none;
 }
 
 .email{
@@ -650,6 +808,7 @@ form .icons a{
   background-color: transparent;
   color:$purple;
   transition: all 0.2s ease;
+  display: none;
 }
 .email:hover{
   transform: translateY(-5px);
@@ -660,6 +819,10 @@ form .icons a{
 
 @media (min-width: $lg){
   .socails li{
+    display: block;
+  }  
+
+  .line, .line2, .email{
     display: block;
   }
 }

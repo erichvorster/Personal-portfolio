@@ -6,6 +6,18 @@
   overflow-x: hidden;
 }
 
+.number-span {
+  font-family: 'Inconsolata', sans-serif;
+  color: #ffeeb4;
+  font-size: 16px;
+}
+
+.number-span-header {
+  font-family: 'Inconsolata', sans-serif;
+  color: #ffeeb4;
+  font-size: 30px;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #0f2830;
@@ -13,7 +25,7 @@ body {
 
 body::-webkit-scrollbar {
   background-color: #0f2830;
-  width: 5px;
+  width: 8px;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -23,9 +35,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .container {
-  padding: 0 10em;
+  padding: 0 2rem;
   margin: 0 auto;
   max-width: 90rem;
+  overflow: hidden;
 }
 
 nav {
@@ -63,6 +76,12 @@ nav {
 
 .nav-links li {
   list-style: none;
+}
+
+.nav-links li:hover {
+  color: #ffeeb4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-links a {
@@ -185,19 +204,14 @@ nav {
 }
 
 .hero .hero__content .hero__content--firstname {
-  font-size: 5rem;
-  line-height: 4rem;
   overflow-y: hidden;
   color: #00d37f;
-  padding: 1rem 0 0 0;
 }
 
 .hero .hero__content .hero__content--header {
-  font-size: 4rem;
   color: #ffeeb4;
-  padding: 2rem 0;
-  line-height: 5rem;
   max-width: 60rem;
+  overflow: hidden;
 }
 
 .hero .hero__content .hero__content--paragraph {
@@ -221,7 +235,6 @@ nav {
   color: #00d37f;
   cursor: pointer;
   display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 16px;
@@ -239,7 +252,7 @@ nav {
   -ms-touch-action: manipulation;
       touch-action: manipulation;
   vertical-align: middle;
-  margin: 3rem 0;
+  margin: 3rem 0 0 0;
 }
 
 .hero .hero__content .button-24:hover,
@@ -253,21 +266,94 @@ nav {
   opacity: .5;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 0px) {
+  .container {
+    padding: 0 1rem;
+  }
   .hero {
     margin-left: 2rem;
+    max-width: 25rem;
+  }
+  .hero__content--firstname {
+    font-size: 8vw;
+  }
+  .hero__content--header {
+    font-size: 6vw;
+  }
+  .hero__content--paragraph {
+    padding-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .hero {
+    max-width: 40rem;
+  }
+  .hero__content--firstname {
+    font-size: 8vw;
   }
 }
 
 @media screen and (min-width: 768px) {
+  .container {
+    padding: 0 4em;
+  }
+  .hero__content--firstname {
+    padding: 0.5rem 0 0.5rem 0;
+    line-height: 3rem;
+    font-size: 8vw;
+  }
+  .hero__content--header {
+    padding: 1rem 0 0.5rem 0;
+    line-height: 4rem;
+    font-size: 6vw;
+  }
+  .hero__content--paragraph {
+    padding: 1rem 0 0 0;
+    line-height: 4rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    padding: 0 8em;
+  }
   .hero {
-    margin-left: 4rem;
+    max-width: 80rem;
+  }
+  .hero__content--firstname {
+    font-size: 7vw;
+    line-height: 5rem;
+  }
+  .hero__content--header {
+    font-size: 6vw;
+    line-height: 5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 0 10em;
+  }
+  .hero {
+    max-width: 100rem;
+  }
+  .hero__content--firstname {
+    font-size: 7vw;
+    line-height: 6rem;
+  }
+  .hero__content--header {
+    font-size: 6vw;
+    line-height: 6rem;
   }
 }
 
 .about__grid {
-  max-width: 55rem;
-  margin-top: 10rem;
+  margin: 10rem auto 0 0;
+  padding: 0 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -275,15 +361,49 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-left: 5rem;
+}
+
+.about__col--1 {
+  margin: 6rem auto 0 auto;
+  color: white;
+  padding: 0 3rem;
+}
+
+.about__col--2 {
+  margin: 6rem auto 0 auto;
+  color: white;
+}
+
+.about__image {
+  height: 22rem;
+  width: 22rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../assets/erich.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(../assets/erich.jpg);
+  background-size: cover;
+  margin: 0 0 1.5rem 0;
+  border-radius: 7px;
+  border: 2px solid #ffeeb4;
 }
 
 .about__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__header h3 {
   font-size: 2rem;
   display: inline;
-  border-bottom: 2px solid #ffeeb4;
   color: #00d37f;
   position: relative;
+}
+
+.about__header .title__line {
+  height: 1px;
+  min-width: 7rem;
+  max-width: 12rem;
+  background-color: #ffeeb4;
+  margin: 25px 0px 0px 30px;
 }
 
 .about__content p {
@@ -296,8 +416,8 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px 0px;
-  color: white;
+  color: #00d37f;
+  margin: 0 auto;
 }
 
 .technologies-1 {
@@ -320,13 +440,12 @@ nav {
 }
 
 .technologies-2 {
-  margin-right: 40px;
   line-height: 1.8rem;
-  margin-left: 40px;
+  margin-left: 80px;
 }
 
 .technologies-2 ul {
-  color: white;
+  color: #00d37f;
   list-style-type: circle #ffeeb4;
   list-style-position: inside;
 }
@@ -341,55 +460,69 @@ nav {
   font-size: 0.8rem;
 }
 
-@media screen and (min-width: 576px) {
-  .about__grid {
+@media screen and (min-width: 768px) {
+  .about__content {
+    max-width: 28rem;
+    padding: 30px;
+  }
+  .grid__col--2 {
     margin-left: 2rem;
+  }
+  .about__grid {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .about__image {
+    height: 10rem;
+    width: 10rem;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .about__grid {
-    margin-left: 4rem;
+@media screen and (min-width: 992px) {
+  .about__content {
+    max-width: 28rem;
+    padding: 30px;
+  }
+  .about__image {
+    height: 15rem;
+    width: 15rem;
   }
 }
 
 .project__title {
-  text-align: center;
-  margin-top: 10rem;
+  margin-top: 12rem;
   margin-bottom: 3rem;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .project__title h3 {
   color: #00d37f;
   font-size: 2rem;
   display: inline;
-  border-bottom: 2px solid #ffeeb4;
+  padding-left: 15px;
+}
+
+.project__title .title__line {
+  height: 1px;
+  background-color: #ffeeb4;
+  margin: 25px 0px 0px 30px;
 }
 
 .projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.projects h3 {
-  color: #00d37f;
-  margin: 1em 0;
 }
 
 .project {
   color: white;
   min-height: 300px;
-  min-width: 200px;
+  min-width: 500px;
   border: 2px solid #014751;
   border-radius: 5px;
   padding: 1.5em;
@@ -490,43 +623,39 @@ nav {
 }
 
 form {
-  background: #00d37f;
-  width: 40rem;
-  margin: 2rem auto;
+  background: #014751;
+  width: 60rem;
+  margin: 0 auto 4rem auto;
   max-width: 97%;
   border-radius: 4px;
   padding: 55px 30px;
 }
 
 .title {
-  margin-top: 15rem;
   overflow: hidden;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  margin: 15rem auto 4rem auto;
+  width: 60rem;
 }
 
 .title h2 {
   color: #00d37f;
   font-size: 2rem;
   display: inline;
-  border-bottom: 2px solid #ffeeb4;
+}
+
+.title .title__line {
+  height: 1px;
+  width: 17rem;
+  background-color: #ffeeb4;
+  margin: 25px 0px 0px 30px;
 }
 
 .title p {
   color: white;
-  margin-top: 1rem;
   margin-bottom: 2rem;
   max-width: 30rem;
 }
@@ -561,7 +690,7 @@ form label {
 
 form .half .item input {
   border-radius: 4px;
-  border: 1px solid white;
+  border: 2px solid #0f2830;
   outline: 0;
   padding: 16px;
   width: 100%;
@@ -577,7 +706,7 @@ form .full {
 form .full textarea {
   background: transparent;
   border-radius: 4px;
-  border: 1px solid white;
+  border: 2px solid #0f2830;
   outline: 0;
   padding: 12px 16px;
   width: 100%;
@@ -592,10 +721,10 @@ form .action {
 form .action input {
   background: transparent;
   border-radius: 4px;
-  border: 1px solid white;
+  border: 2px solid #0f2830;
   cursor: pointer;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 400;
   height: 44px;
   letter-spacing: 3px;
   outline: 0;
@@ -604,18 +733,19 @@ form .action input {
 }
 
 form .action input[type="submit"] {
-  background: white;
+  background: #0f2830;
+  color: #00d37f;
+  border: 2px solid #00d37f;
+  border-radius: 6px;
+  width: 150px;
 }
 
-form .icons a {
-  border: 1px solid white;
-  border-radius: 50%;
-  line-height: 36px;
-  text-align: center;
-  font-weight: 600;
-  width: 38px;
-  margin-right: 10px;
-  color: black;
+form .action input[type="reset"] {
+  background: #0f2830;
+  color: #00d37f;
+  border: 2px solid #00d37f;
+  border-radius: 6px;
+  width: 150px;
 }
 
 @media (max-width: 768px) {
@@ -680,6 +810,7 @@ form .icons a {
   background-color: #6e5494;
   bottom: 0rem;
   left: 2.5rem;
+  display: none;
 }
 
 .line2 {
@@ -689,6 +820,7 @@ form .icons a {
   background-color: #6e5494;
   bottom: 0rem;
   right: 2.5rem;
+  display: none;
 }
 
 .email {
@@ -702,6 +834,7 @@ form .icons a {
   color: #d2c4fb;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  display: none;
 }
 
 .email:hover {
@@ -714,6 +847,9 @@ form .icons a {
 
 @media (min-width: 992px) {
   .socails li {
+    display: block;
+  }
+  .line, .line2, .email {
     display: block;
   }
 }

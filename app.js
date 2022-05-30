@@ -126,8 +126,17 @@ gsap.from(".about__grid", {
   ease: "power4",
 });
 
-gsap.from(".project", {
+gsap.from(".project__container", {
   scrollTrigger: ".project",
+  y: 20,
+  opacity: 0,
+  duration: 0.8,
+  delay: 0.4,
+  ease: "power4",
+});
+
+gsap.from(".contact__container", {
+  scrollTrigger: ".item",
   y: 20,
   opacity: 0,
   duration: 0.8,

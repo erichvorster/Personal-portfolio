@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
   rel="stylesheet"  type='text/css'>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
@@ -22,10 +24,10 @@
         <h4>EV</h4>
     </div>
     <ul class="nav-links">
-        <li class="home__link"><a href="#"></a>Home</li>
-        <li class="about__link"><a href="#"></a>About</li>
-        <li class="project__link"><a href="#"></a>Projects</li>
-        <li class="contact__link"><a href="#"></a>Contact</li>
+        <li class="home__link"><a href="#"></a><span class="number-span">01. </span>Home</li>
+        <li class="about__link"><a href="#"></a><span class="number-span">02. </span>About</li>
+        <li class="project__link"><a href="#"></a><span class="number-span">03. </span>Projects</li>
+        <li class="contact__link"><a href="#"></a><span class="number-span">04. </span>Contact</li>
     </ul>
     <div class="burger">
         <div class="line1"></div>
@@ -55,26 +57,40 @@
 
 <div class="container">
     <div class="about__grid">
-        <div class="about__content">
-            <h3 class="about__header">About me</h3>
-            <p>Ive alway thaught it important to pursue a career in something you love, and after some searching Im glad to have found that something in programming.<br><br>Over the past two years I have gained a solid understanding of web technologies such as HTML5, CSS3 and JavaScript. I spent the first part of my journey placing a lot of focus on HTML, CSS/SCSS and learning solid UI/UX design principles. I also spent alot of time working with CSS frameworks like Bootstrap and TailwindCSS. After getting web pages to look the the way I wanted them to I started placing more focus on JavaScript. <br><br/> I feel I have gained an advanced level knowledge of the language ranging from assynchronous code to object oriented principles. i am also fermiliar with latest ES6 features. Currently I am working on furthering my knowledge of React along with state management through Redux. In the coming future I plan on learning learning Node.JS and Next.JS</p>
-        </div>
-        <div class="technologies__container">
-            <div class="technologies-1">
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>SCSS</li>
-                    <li>TailwindCSS</li>
-                </ul>
+        <div about__col--1>
+            <div class="about__content">
+                <div class="about__header">
+                    <h3 ><span class="number-span-header">01. </span>About me</h3>
+                    <div class="title__line"></div>
+                </div>
+                <p>Ive alway thaught it important to pursue a career in something you love, and after some searching Im glad to have found that something in programming.<br><br>Over the past two years I have gained a solid understanding of web technologies such as HTML5, CSS3 and JavaScript. I spent the first part of my journey placing a lot of focus on HTML, CSS/SCSS and learning solid UI/UX design principles. I also spent alot of time working with CSS frameworks like Bootstrap and TailwindCSS. After getting web pages to look the the way I wanted them to I started placing more focus on JavaScript. <br><br/> I feel I have gained an advanced level knowledge of the language ranging from assynchronous code to object oriented principles. i am also fermiliar with latest ES6 features. Currently I am working on furthering my knowledge of React along with state management through Redux. In the coming future I plan on learning learning Node.JS and Next.JS</p>
             </div>
-            <div class="technologies-2">
-                <ul>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>Bootstrap</li>
-                    <li>TailwindCSS</li>
-                </ul>
+            
+        </div>
+        <div class="about__col--2">
+            <div class="about__image">
+        
+            </div>
+            <div>
+                <p>Technologies I have recently used: </p>
+            </div>
+            <div class="technologies__container">
+                <div class="technologies-1">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>SCSS</li>
+                        <li>TailwindCSS</li>
+                    </ul>
+                </div>
+                <div class="technologies-2">
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Bootstrap</li>
+                        <li>TailwindCSS</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -85,10 +101,12 @@
 
 <div class="container">
     <div class="project__container">
-    <div class="project__title">
-        <h3>SOME STUFF IVE BUILT</h3>
-    </div>
+    
     <div class="projects">
+        <div class="project__title">
+            <h3><span class="number-span-header">02. </span>Some things ive built</h3>
+            <div class="title__line"></div>
+        </div>
         <div class="project">
            <div class="project__header">
                <h4>To Do List</h4>
@@ -159,36 +177,34 @@
 <!--CONTACT-->
 
 <div class="container">
-    <div class="title">
-        <h2>Contact</h2>
-        <p>Feel free to get in touch for any inquires</p>
+    <div class="contact__container">
+        <div class="title">
+            <h2><span class="number-span-header">03. </span>Contact</h2>
+            <div class="title__line"></div>
+        </div>
+        <form action="">
+            <div class="half">
+                <div class="item">
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="item">
+                    <label for="email">Email</label>
+                    <input type="text" id="name">
+                </div>
+            </div>
+            <div class="full">
+                <label for="message">Message</label>
+                <textarea name="" id="message" cols="30" rows="10"></textarea>
+            </div>
+            <div class="action">
+                <input type="submit" value="Send">
+                <input type="reset" value="Reset">
+            </div>
+            <div class="icons">
+            </div>
     </div>
-    <form action="">
-        <div class="half">
-            <div class="item">
-                <label for="name">Name</label>
-                <input type="text" id="name">
-            </div>
-            <div class="item">
-                <label for="email">Email</label>
-                <input type="text" id="name">
-            </div>
-        </div>
-        <div class="full">
-            <label for="message">Message</label>
-            <textarea name="" id="message" cols="30" rows="10"></textarea>
-        </div>
-        <div class="action">
-            <input type="submit" value="SEND MESSAGE">
-            <input type="reset" value="RESET">
-        </div>
-        <div class="icons">
-            <a href="" class="fa fa-twitter"></a>
-            <a href="" class="fa fa-facebook"></a>
-            <a href="" class="fa fa-github"></a>
-        </div>
-    </form>
-
+</form>
 </div>
 
 <div class="socail">
