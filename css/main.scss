@@ -53,7 +53,6 @@ body::-webkit-scrollbar-thumb {
   max-width: 90rem;
   overflow: hidden;
 }
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -61,6 +60,26 @@ nav {
   min-height: 8vh;
   font-family: "Poppins", sans-serif;
   padding: 1.5rem 4rem;
+  top:0;
+  position: fixed;
+  left:0;
+  width:100%;
+  z-index:100;
+  transition: all 300ms ease-in-out;
+  background-color: #0f2830;
+  overflow: hidden;
+}
+
+.scroll-down {
+	nav {
+		transform: translate3d(0, -100%, 0);
+	}
+}
+
+.scroll-up {
+nav {
+		filter: drop-shadow(0 -10px 20px rgb(0,0,0));
+	}
 }
 
 .logo {
@@ -76,6 +95,7 @@ nav {
   display: flex;
   justify-content: space-around;
   color:$green;
+  padding-top:5px;
 }
 
 
@@ -118,10 +138,14 @@ nav {
   .body {
     overflow-x: hidden;
   }
+  .nav{
+    position: fixed;
+  }
+
   .nav-links {
     position: absolute;
     right: 0px;
-    height: 92vh;
+    min-height: 92vh;
     top: 8vh;
     background-color: yellow;
     display: flex;
@@ -130,6 +154,7 @@ nav {
     width: 100%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+    z-index:9999;
   }
 
   .nav-links li {
@@ -171,10 +196,11 @@ nav {
   background-color: $grey;
   margin-top:5rem;
   max-width: 50rem;
-  
+  z-index: 1;
 
   .hero__content {
     overflow-y: hidden;
+    z-index:0;
 
     .hero__content--firstname{
       overflow-y: hidden;
@@ -224,13 +250,14 @@ nav {
   touch-action: manipulation;
   vertical-align: middle;
   margin:3rem 0 0 0;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .button-24:hover,
 .button-24:active {
-  background-color: initial;
-  background-position: 0 0;
-  color: $green;
+  background-color: rgba(0, 211, 127, 0.1);
+  
+
 }
 
 .button-24:active {
@@ -341,33 +368,47 @@ nav {
 
 
 //ABOUT
-.about__grid{
+
+.about__header{
   margin:10rem auto 0 0;
-  padding:0 2rem;
+  padding-left:3rem;
+}
+.about__grid{
+  padding:0 3rem;
   justify-content: center;
   display: flex;
   flex-direction: column;
 }
-
 .about__col--1{
-  margin:6rem auto 0 auto;
+  margin:0 auto;
   color:white;
-  padding: 0 3rem;
+  overflow: hidden;
+
+   h3{
+     padding:1rem 0;
+     color:$green;
+   }
 }
 .about__col--2{
-  margin:6rem auto 0 auto;
+  margin:0 auto;
   color:white;
 }
 
-.about__image{
-  height:22rem;
-  width:22rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
-  url(../assets/erich.jpg);
-  background-size: cover;
-  margin:0 0 1.5rem 0;
-  border-radius: 7px;
-  border: 2px solid $yellow;
+
+.about__image__container{
+  max-width:22rem;
+  overflow: hidden;
+  border: 2px solid $blue;
+  border-radius:20px;
+  margin-top: 4rem;
+  
+  
+  .about__image{
+   height:auto;
+   display: block;
+   max-width:100%;
+
+  }
 }
 
 .about__header{
@@ -375,18 +416,23 @@ nav {
 
   h3{
   font-size: 2rem;
-  display: inline;
   color:$green;
   position: relative;
+
   }
 
   .title__line{
      height:1px;
-     min-width:7rem;
+     min-width:4rem;
      max-width:12rem;
      background-color:$yellow;
      margin:25px 0px 0px 30px;
   }
+}
+
+.about__content{
+  overflow:hidden ;
+  padding-bottom:2rem;
 }
 
 .about__content p{
@@ -398,9 +444,9 @@ nav {
 
 .technologies__container{
   display: flex;
-
-  color:$green;
+  color:white;
   margin: 0 auto;
+  padding-bottom:2rem;
 }
 
 .technologies-1{
@@ -428,7 +474,7 @@ nav {
   margin-left:80px;
 
   ul{
-    color:$green;
+    color:white;
     list-style-type: circle $yellow;
     list-style-position: inside;
       
@@ -444,44 +490,66 @@ nav {
 }
 
 
+
+
+
+
 @media screen and (min-width:$sm){
+
+  
   
 }
 @media screen and (min-width:$md){
-  .about__content{
-    max-width:28rem;
-    padding:30px;
-  }
-  .grid__col--2{
-    margin-left: 2rem;
-  }
+
   .about__grid{
     flex-direction: row;
+    padding:0;
   }
-  .about__image{
-    height:10rem;
-    width:10rem;
-  
+  .about__header{
+    padding-left: 0;
   }
+ 
+  .about__col--1{
+    max-width:30rem;
+    padding-right:2rem;
+  }
+
+  .about__image__container{
+    margin-top: 3rem;
+  }
+ 
+ 
 }
 @media screen and (min-width:$lg){
-  
 
-  .about__content{
-    max-width:28rem;
-    padding:30px;
+
+
+  .about__col--1{
+    max-width:40rem;
+    padding-right:2rem;
   }
 
-
-  .grid__col--2{
+  .about__col--2{
+    min-width: 15rem;
     
   }
 
-  .about__image{
-    height:15rem;
-    width:15rem;
-  
+
+  .about__image__container{
+    max-width:18rem;
+    
+  }  
+
+
+}
+@media screen and (min-width:1400px){
+
+  .about__header{
+    padding:0 3rem;
   }
+
+
+
 }
 
 
@@ -492,38 +560,43 @@ nav {
   margin-bottom: 3rem;
   overflow: hidden;
   display: flex;
+  justify-content: center;
 
   h3{
     color:$green;
     font-size: 2rem;
-    display: inline;
     padding-left:15px;
+
   }
   .title__line{
     height:1px;
     
     background-color:$yellow;
     margin:25px 0px 0px 30px;
- }
-
-
+  }
 }
 .projects{
   display:flex;
-  
+  justify-content: center;
+  flex-wrap: wrap;
+  width:100%;
+  margin:0;
+  padding:20px;
+  overflow: hidden;
 }
 
 .project{
   color:white;
   min-height: 300px;
-  min-width:500px;
   border:2px solid $blue;
   border-radius: 5px;
   padding:1.5em;
-  margin:1rem 1rem;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  transition: 0.3s ease;
-
+  max-width:30rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin:1rem;
+  transition: 0.1s ease-in-out;
+ 
+  
   .project__header{
     display: flex;
     justify-content: space-between;
@@ -549,6 +622,36 @@ nav {
   }
 
   
+}
+
+.project:hover{
+  transform: translateY(-20px) !important;
+  cursor:pointer;
+}
+
+.project-1{
+  background:linear-gradient(0deg, rgba(15, 40, 48, 0.9)
+  , rgba(15, 40, 48, 0.9)
+  ), url(../assets/project1.png);
+  background-size: cover;
+}
+.project-2{
+  background:linear-gradient(0deg, rgba(15, 40, 48, 0.9)
+  , rgba(15, 40, 48, 0.9)
+  ), url(../assets/project2.png);
+  background-size: cover;
+}
+.project-3{
+  background:linear-gradient(0deg, rgba(15, 40, 48, 0.9)
+  , rgba(15, 40, 48, 0.9)
+  ), url(../assets/project2.png);
+  background-size: cover;
+}
+.project-4{
+  background:linear-gradient(0deg, rgba(15, 40, 48, 0.9)
+  , rgba(15, 40, 48, 0.9)
+  ), url(../assets/project1.png);
+  background-size: cover;
 }
 
 .project__technologies{
@@ -578,9 +681,7 @@ nav {
 @media screen and (min-width:$sm){
   .projects{
      flex-wrap: wrap;
-    .project{
-      max-width:400px;
-    }
+    
   }
 }
 
@@ -589,39 +690,57 @@ nav {
   .projects{
     flex-direction: row;
     flex-wrap: wrap;
+  
   }
   
   .project{
-    max-width:200px;
+  
   }
+
 }
 
 @media screen and (min-width:$lg){
   .projects{
     flex-direction: row;
     flex-wrap: wrap;
+    
 
     .project{
-     
+      max-width:22rem;
+    }
+  }
+}
+@media screen and (min-width:$xl){
+  .projects{
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+
+    .project{
+      max-width:25rem;
     }
   }
 }
 
 //CONTACT
 
+
+
 form{
-  background:$blue;
+  background:$grey;
   width: 60rem;
   margin: 0 auto 4rem auto;
   max-width:97%;
   border-radius: 4px;
+  border:2px solid $blue;
   padding:55px 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .title{
   overflow:hidden;
-  text-align: center;
   display:flex;
-  margin: 15rem auto 4rem auto;
+  flex-direction: column;
+  margin: 15rem auto 1rem auto;
   width:60rem;
 
   h2{
@@ -630,11 +749,10 @@ form{
     display: inline;
     
 }
-.title__line{
-  height:1px;
-  width:17rem;
-  background-color:$yellow;
-  margin:25px 0px 0px 30px;
+
+p{
+  padding-top: 1rem;
+  line-height: 1.8rem;
 }
 
 }
@@ -659,9 +777,10 @@ form .half .item{
 
 form label{
   display: block;
-  font-size: 13px;
-  letter-spacing: 3.5px;
+  font-size: 1.2rem;
+  color:$yellow;
   margin-bottom:16px;
+  font-weight: bold;
 }
 
 form .half .item input {
@@ -673,6 +792,7 @@ form .half .item input {
   height:44px;
   background: transparent;
   font-size: 17px;
+  border:2px solid $blue;
 
 }
 
@@ -690,6 +810,9 @@ form .full textarea{
   width:100%;
   height:200px;
   font-size: 1rem;
+  color:white;
+  font-weight: 500;
+  border:2px solid $blue;
 }
 
 form .action{
@@ -699,15 +822,21 @@ form .action{
 form .action input{
   background: transparent;
   border-radius: 4px;
-  border:2px solid $grey;
   cursor: pointer;
-  font-size:13px;
+  font-size:16px;
   font-weight: 400;
   height:44px;
-  letter-spacing: 3px;
   outline:0;
   padding: 0 20px 0 22px;
   margin-right:10px;
+  
+  
+}
+form .action input[type="submit"]:hover{
+  background-color: rgba(0, 211, 127, 0.1);
+}
+form .action input[type="reset"]:hover{
+  background-color: rgba(0, 211, 127, 0.1);
 }
 
 form .action input[type="submit"]{
@@ -716,6 +845,7 @@ form .action input[type="submit"]{
   border: 2px solid $green;
   border-radius: 6px;
   width:150px;
+  transition: background-color 0.2s ease-in-out;
 }
 
 form .action input[type="reset"]{
@@ -724,6 +854,7 @@ form .action input[type="reset"]{
   border: 2px solid $green;
   border-radius: 6px;
   width:150px;
+  transition: background-color 0.2s ease-in-out;
 }
 
 
