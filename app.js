@@ -26,43 +26,66 @@ const navSlide = () => {
 
 navSlide();
 
+const body = document.body;
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= 0) {
+    body.classList.remove("scroll-up");
+    return;
+  }
+
+  if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+    body.classList.remove("scroll-up");
+    body.classList.add("scroll-down");
+  } else if (
+    currentScroll < lastScroll &&
+    body.classList.contains("scroll-down")
+  ) {
+    body.classList.remove("scroll-down");
+    body.classList.add("scroll-up");
+  }
+  lastScroll = currentScroll;
+});
+
 //Text animation
 
-// gsap.from(".logo", {
-//   duration: 0.5,
-//   y: -30,
-//   opacity: 0,
-//   ease: "power4",
-//   delay: 1,
-// });
-// gsap.from(".home__link", {
-//   duration: 0.5,
-//   y: -30,
-//   opacity: 0,
-//   ease: "power4",
-//   delay: 1.05,
-// });
-// gsap.from(".about__link", {
-//   duration: 0.5,
-//   y: -30,
-//   opacity: 0,
-//   ease: "power4",
-//   delay: 1.1,
-// });
-// gsap.from(".project__link", {
-//   duration: 0.5,
-//   y: -30,
-//   opacity: 0,
-//   ease: "power4",
-//   delay: 1.15,
-// });
-// gsap.from(".contact__link", {
-//   duration: 0.5,
-//   y: -10,
-//   opacity: 0,
-//   ease: "power4",
-//   delay: 1.2,
-// });
+gsap.from(".logo", {
+  duration: 0.5,
+  y: -30,
+  opacity: 0,
+  ease: "power4",
+  delay: 1,
+});
+gsap.from(".home__link", {
+  duration: 0.5,
+  y: -30,
+  opacity: 0,
+  ease: "power4",
+  delay: 1.05,
+});
+gsap.from(".about__link", {
+  duration: 0.5,
+  y: -30,
+  opacity: 0,
+  ease: "power4",
+  delay: 1.1,
+});
+gsap.from(".project__link", {
+  duration: 0.5,
+  y: -30,
+  opacity: 0,
+  ease: "power4",
+  delay: 1.15,
+});
+gsap.from(".contact__link", {
+  duration: 0.5,
+  y: -10,
+  opacity: 0,
+  ease: "power4",
+  delay: 1.2,
+});
 
 gsap.from(".hero__content--firstname", {
   duration: 0.5,
@@ -71,14 +94,7 @@ gsap.from(".hero__content--firstname", {
   ease: "power4",
   delay: 1.4,
 });
-gsap.from(".hero__content--surname", {
-  duration: 0.5,
-  y: 50,
-  opacity: 0,
-  delay: 1,
-  ease: "power4",
-  delay: 1.45,
-});
+
 gsap.from(".hero__content--header", {
   duration: 0.5,
   y: 50,
@@ -219,27 +235,4 @@ gsap.from(".contact__container", {
   duration: 0.8,
   delay: 0.3,
   ease: "power4",
-});
-
-const body = document.body;
-let lastScroll = 0;
-
-window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset;
-  if (currentScroll <= 0) {
-    body.classList.remove("scroll-up");
-    return;
-  }
-
-  if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-    body.classList.remove("scroll-up");
-    body.classList.add("scroll-down");
-  } else if (
-    currentScroll < lastScroll &&
-    body.classList.contains("scroll-down")
-  ) {
-    body.classList.remove("scroll-down");
-    body.classList.add("scroll-up");
-  }
-  lastScroll = currentScroll;
 });
