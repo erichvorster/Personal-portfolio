@@ -27,95 +27,95 @@ const navSlide = () => {
 navSlide();
 
 //TEXT ANIMATION
-gsap.from(".logo", {
-  duration: 0.5,
-  y: -30,
-  opacity: 0,
-  ease: "power4",
-  delay: 1,
-});
-gsap.from(".home__link", {
-  duration: 0.5,
-  y: -30,
-  opacity: 0,
-  ease: "power4",
-  delay: 1.05,
-});
-gsap.from(".about__link", {
-  duration: 0.5,
-  y: -30,
-  opacity: 0,
-  ease: "power4",
-  delay: 1.1,
-});
-gsap.from(".project__link", {
-  duration: 0.5,
-  y: -30,
-  opacity: 0,
-  ease: "power4",
-  delay: 1.15,
-});
-gsap.from(".contact__link", {
-  duration: 0.5,
-  y: -10,
-  opacity: 0,
-  ease: "power4",
-  delay: 1.2,
-});
+// gsap.from(".logo", {
+//   duration: 0.5,
+//   y: -30,
+//   opacity: 0,
+//   ease: "power4",
+//   delay: 1,
+// });
+// gsap.from(".home__link", {
+//   duration: 0.5,
+//   y: -30,
+//   opacity: 0,
+//   ease: "power4",
+//   delay: 1.05,
+// });
+// gsap.from(".about__link", {
+//   duration: 0.5,
+//   y: -30,
+//   opacity: 0,
+//   ease: "power4",
+//   delay: 1.1,
+// });
+// gsap.from(".project__link", {
+//   duration: 0.5,
+//   y: -30,
+//   opacity: 0,
+//   ease: "power4",
+//   delay: 1.15,
+// });
+// gsap.from(".contact__link", {
+//   duration: 0.5,
+//   y: -10,
+//   opacity: 0,
+//   ease: "power4",
+//   delay: 1.2,
+// });
 
-gsap.from(".hero__content--firstname", {
-  duration: 0.5,
-  y: 50,
-  opacity: 0,
-  ease: "power4",
-  delay: 1.4,
-});
-gsap.from(".hero__content--surname", {
-  duration: 0.5,
-  y: 50,
-  opacity: 0,
-  delay: 1,
-  ease: "power4",
-  delay: 1.45,
-});
-gsap.from(".hero__content--header", {
-  duration: 0.5,
-  y: 50,
-  opacity: 0,
-  delay: 1,
-  ease: "power4",
-  delay: 1.5,
-});
-gsap.from(".hero__content--paragraph", {
-  duration: 0.5,
-  y: 50,
-  opacity: 0,
-  delay: 1,
-  ease: "power4",
-  delay: 1.55,
-});
-gsap.from(".button-24", {
-  duration: 0.5,
-  y: 50,
-  opacity: 0,
-  delay: 1,
-  ease: "power4",
-  delay: 1.65,
-});
-gsap.from(".socails", {
-  duration: 0.5,
-  opacity: 0,
-  delay: 1,
-  ease: "power4",
-  delay: 2,
-});
-gsap.from(".email", {
-  duration: 0.5,
-  opacity: 0,
-  delay: 1,
-  ease: "power4",
-  delay: 2,
-});
+// gsap.from(".hero__content--firstname", {
+//   duration: 0.5,
+//   y: 50,
+//   opacity: 0,
+//   ease: "power4",
+//   delay: 1.4,
+// });
+// gsap.from(".hero__content--surname", {
+//   duration: 0.5,
+//   y: 50,
+//   opacity: 0,
+//   delay: 1,
+//   ease: "power4",
+//   delay: 1.45,
+// });
+// gsap.from(".hero__content--header", {
+//   duration: 0.5,
+//   y: 50,
+//   opacity: 0,
+//   delay: 1,
+//   ease: "power4",
+//   delay: 1.5,
+// });
+// gsap.from(".hero__content--paragraph", {
+//   duration: 0.5,
+//   y: 50,
+//   opacity: 0,
+//   delay: 1,
+//   ease: "power4",
+//   delay: 1.55,
+// });
+// gsap.from(".button-24", {
+//   duration: 0.5,
+//   y: 50,
+//   opacity: 0,
+//   delay: 1,
+//   ease: "power4",
+//   delay: 1.65,
+// });
+// gsap.from(".socails", {
+//   duration: 0.5,
+//   opacity: 0,
+//   delay: 1,
+//   ease: "power4",
+//   delay: 2,
+// });
+// gsap.from(".email", {
+//   duration: 0.5,
+//   opacity: 0,
+//   delay: 1,
+//   ease: "power4",
+//   delay: 2,
+// });
 
 ///About
 
@@ -220,69 +220,27 @@ gsap.from(".contact__container", {
   ease: "power4",
 });
 
-const body = document.body;
-let lastScroll = 0;
+// const body = document.body;
+// let lastScroll = 0;
 
-window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset;
-  if (currentScroll <= 0) {
-    body.classList.remove("scroll-up");
-    return;
-  }
+// window.addEventListener("scroll", () => {
+//   const currentScroll = window.pageYOffset;
+//   if (currentScroll <= 0) {
+//     body.classList.remove("scroll-up");
+//     return;
+//   }
 
-  if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-    body.classList.remove("scroll-up");
-    body.classList.add("scroll-down");
-  } else if (
-    currentScroll < lastScroll &&
-    body.classList.contains("scroll-down")
-  ) {
-    body.classList.remove("scroll-down");
-    body.classList.add("scroll-up");
-  }
-  lastScroll = currentScroll;
-});
+//   if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+//     body.classList.remove("scroll-up");
+//     body.classList.add("scroll-down");
+//   } else if (
+//     currentScroll < lastScroll &&
+//     body.classList.contains("scroll-down")
+//   ) {
+//     body.classList.remove("scroll-down");
+//     body.classList.add("scroll-up");
+//   }
+//   lastScroll = currentScroll;
+// });
 
 //Form validation
-
-const form = document.getElementById("form");
-const name = document.getElementById("name");
-const email = document.getElementById("email");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  checkInputs();
-});
-
-function checkInputs() {
-  // trim to remove the whitespaces
-  const usernameValue = name.value.trim();
-  const emailValue = email.value.trim();
-
-  if (usernameValue === "") {
-    setErrorFor(name, "Username cannot be blank");
-  } else {
-    setSuccessFor(name);
-  }
-
-  if (emailValue === "") {
-    setErrorFor(email, "Email cannot be blank");
-  } else if (!isEmail(emailValue)) {
-    setErrorFor(email, "Not a valid email");
-  } else {
-    setSuccessFor(email);
-  }
-}
-
-function setErrorFor(input, message) {
-  const formControl = input.parentElement;
-  const small = formControl.querySelector("small");
-  formControl.className = "form-control error";
-  small.innerText = message;
-}
-
-function setSuccessFor(input) {
-  const formControl = input.parentElement;
-  formControl.className = "form-control success";
-}

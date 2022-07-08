@@ -7,13 +7,13 @@
 }
 
 .number-span {
-  font-family: 'Inconsolata', sans-serif;
+  font-family: "Inconsolata", sans-serif;
   color: #ffeeb4;
   font-size: 12px;
 }
 
 .number-span-header {
-  font-family: 'Inconsolata', sans-serif;
+  font-family: "Inconsolata", sans-serif;
   color: #ffeeb4;
   font-size: 22px;
 }
@@ -39,8 +39,18 @@ body::-webkit-scrollbar-thumb {
   margin: 0 auto;
   max-width: 90rem;
   overflow: hidden;
-  position: relative;
-  z-index: 1;
+  z-index: 0;
+}
+
+.nav-container {
+  width: 100%;
+  z-index: 1001;
+}
+
+.navs {
+  background-color: #0f2830;
+  width: 100%;
+  z-index: 800;
 }
 
 nav {
@@ -50,21 +60,24 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   min-height: 8vh;
   font-family: "Poppins", sans-serif;
   padding: 1.5rem 4rem;
-  top: 0;
-  position: fixed;
-  left: 0;
   width: 100%;
-  z-index: 100;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   background-color: #0f2830;
   overflow: hidden;
+  z-index: 2000;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .scroll-down nav {
@@ -94,16 +107,12 @@ nav {
       justify-content: space-around;
   color: #00d37f;
   padding-top: 5px;
-  z-index: 99999;
-  position: relative;
 }
 
 .nav-links li {
   list-style: none;
   font-size: 12px;
   cursor: pointer;
-  position: relative;
-  z-index: 99998;
 }
 
 .nav-links li:hover {
@@ -144,13 +153,10 @@ nav {
   .body {
     overflow-x: hidden;
   }
-  .nav {
-    position: fixed;
-  }
   .nav-links {
     position: absolute;
     right: 0px;
-    height: 92vh;
+    height: 100vh;
     top: 12vh;
     background-color: yellow;
     display: -webkit-box;
@@ -170,7 +176,7 @@ nav {
     transition: -webkit-transform 0.5s ease-in;
     transition: transform 0.5s ease-in;
     transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
-    z-index: 50;
+    z-index: 9000;
   }
   .nav-links li {
     opacity: 0;
@@ -182,7 +188,6 @@ nav {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
     height: 92vh;
-    z-index: 9999;
   }
 }
 
@@ -237,14 +242,18 @@ nav {
 
 .hero .hero__content {
   overflow-y: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .hero .hero__content .hero__content--firstname {
   overflow-y: hidden;
   color: #00d37f;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   font-size: clamp(20px, 10vw, 80px);
   padding-top: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .hero .hero__content .hero__content--header {
@@ -252,6 +261,8 @@ nav {
   max-width: 60rem;
   overflow: hidden;
   font-size: clamp(30px, 5vw, 60px);
+  position: relative;
+  z-index: 1;
 }
 
 .hero .hero__content .hero__content--paragraph {
@@ -259,10 +270,14 @@ nav {
   max-width: 30rem;
   line-height: 1.5rem;
   font-size: 14px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero .hero__content p {
   color: white;
+  position: relative;
+  z-index: 1;
 }
 
 .hero .hero__content .button-24 {
@@ -296,37 +311,56 @@ nav {
   margin: 2rem 0 0 0;
   -webkit-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
-  z-index: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .hero .hero__content .button-24:hover,
 .hero .hero__content .button-24:active {
   background-color: rgba(0, 211, 127, 0.1);
+  position: relative;
+  z-index: 1;
 }
 
 .hero .hero__content .button-24:active {
-  opacity: .5;
+  opacity: 0.5;
+  position: relative;
+  z-index: 1;
 }
 
 @media screen and (min-width: 0px) {
   .hero {
     max-width: 25rem;
     padding-top: 3rem;
+    position: relative;
+    z-index: 1;
+  }
+  .hero__content--firstname {
+    position: relative;
+    z-index: 1;
+  }
+  .hero__content--header {
+    position: relative;
     z-index: 1;
   }
   .hero__content--paragraph {
     padding-top: 1rem;
+    position: relative;
+    z-index: 1;
   }
 }
 
 @media screen and (min-width: 576px) {
   .hero {
     max-width: 60rem;
+    position: relative;
     z-index: 1;
   }
   .hero__content {
-    padding-top: .5rem;
+    padding-top: 0.5rem;
     margin-left: 2rem;
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -335,7 +369,7 @@ nav {
     padding: 0 4em;
   }
   .hero__content {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     margin-left: 3rem;
   }
   .hero__content--firstname {
@@ -619,7 +653,7 @@ nav {
   color: #00d37f;
   margin-top: 0.8rem;
   font-size: 24px;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 }
 
 .featured__content p {
@@ -673,7 +707,7 @@ nav {
   .featured__content h1 {
     color: #00d37f;
     margin-top: 0.8rem;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
   }
   .featured__content p {
     line-height: 1.4rem;
@@ -762,7 +796,7 @@ nav {
 .featured__content--2 h1 {
   color: #00d37f;
   margin-top: 0.8rem;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   font-size: 24px;
 }
 
@@ -817,7 +851,7 @@ nav {
   .featured__content--2 h1 {
     color: #00d37f;
     margin-top: 0.8rem;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
   }
   .featured__content--2 p {
     line-height: 1.4rem;
@@ -1107,7 +1141,7 @@ form .half .item input {
   font-size: 14px;
   border: 2px solid #014751;
   color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 form .full {
@@ -1282,7 +1316,9 @@ form .action input[type="reset"] {
   .socails li {
     display: block;
   }
-  .line, .line2, .email {
+  .line,
+  .line2,
+  .email {
     display: block;
   }
 }
