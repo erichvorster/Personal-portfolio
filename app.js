@@ -15,7 +15,10 @@ const navSlide = () => {
           index / 7 + 1.5
         }s`;
       }
-      console.log(index / 7);
+
+      link.addEventListener("click", () => {
+        nav.classList.remove("nav-active");
+      });
     });
 
     //Burger Animation
@@ -93,6 +96,7 @@ gsap.from(".hero__content--firstname", {
   opacity: 0,
   ease: "power4",
   delay: 1.4,
+  zIndex: 1,
 });
 
 gsap.from(".hero__content--header", {
@@ -102,6 +106,7 @@ gsap.from(".hero__content--header", {
   delay: 1,
   ease: "power4",
   delay: 1.5,
+  zIndex: 1,
 });
 gsap.from(".hero__content--paragraph", {
   duration: 0.5,
@@ -110,6 +115,7 @@ gsap.from(".hero__content--paragraph", {
   delay: 1,
   ease: "power4",
   delay: 1.55,
+  zIndex: 1,
 });
 gsap.from(".button-24", {
   duration: 0.5,
@@ -118,6 +124,7 @@ gsap.from(".button-24", {
   delay: 1,
   ease: "power4",
   delay: 1.65,
+  zIndex: 1,
 });
 gsap.from(".socails", {
   duration: 0.5,
