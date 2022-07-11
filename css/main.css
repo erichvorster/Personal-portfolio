@@ -12,6 +12,7 @@
 }
 
 .number-span-header {
+  display: none;
   font-family: "Inconsolata", sans-serif;
   color: #ffeeb4;
   font-size: 34px;
@@ -379,6 +380,12 @@ nav {
     padding: 1rem 0 0 0;
     line-height: 4rem;
   }
+  .number-span-header {
+    display: inline-block;
+    font-family: "Inconsolata", sans-serif;
+    color: #ffeeb4;
+    font-size: 34px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -480,7 +487,7 @@ nav {
 
 .about__content {
   overflow: hidden;
-  padding-bottom: 2rem;
+  padding-bottom: 0.5rem;
 }
 
 .about__content p {
@@ -1095,7 +1102,7 @@ form {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 8rem auto 1rem auto;
-  width: 60rem;
+  max-width: 60rem;
 }
 
 .title h2 {

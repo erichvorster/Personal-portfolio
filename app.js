@@ -61,6 +61,13 @@ gsap.from(".logo", {
   ease: "power4",
   delay: 1,
 });
+gsap.from(".burger", {
+  duration: 0.5,
+  y: -30,
+  opacity: 0,
+  ease: "power4",
+  delay: 1.05,
+});
 gsap.from(".home__link", {
   duration: 0.5,
   y: -30,

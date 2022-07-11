@@ -21,6 +21,7 @@ $xl: 1200px;
   font-size: 17px;
 }
 .number-span-header {
+  display: none;
   font-family: "Inconsolata", sans-serif;
   color: $yellow;
   font-size: 34px;
@@ -335,6 +336,12 @@ nav {
     padding: 1rem 0 0 0;
     line-height: 4rem;
   }
+  .number-span-header {
+    display: inline-block;
+    font-family: "Inconsolata", sans-serif;
+    color: $yellow;
+    font-size: 34px;
+  }
 }
 @media screen and (min-width: $lg) {
   .container {
@@ -426,7 +433,7 @@ nav {
 
 .about__content {
   overflow: hidden;
-  padding-bottom: 2rem;
+  padding-bottom: 0.5rem;
 }
 
 .about__content p {
@@ -998,7 +1005,7 @@ form {
   display: flex;
   flex-direction: column;
   margin: 8rem auto 1rem auto;
-  width: 60rem;
+  max-width: 60rem;
 
   h2 {
     color: $green;
