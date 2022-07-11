@@ -186,8 +186,16 @@ gsap.from(".about__image__container", {
 
 ///Projects
 
-gsap.from(".project__title", {
-  scrollTrigger: ".project",
+gsap.from(".featured__header", {
+  scrollTrigger: ".featured",
+  y: 50,
+  opacity: 0,
+  duration: 0.8,
+  delay: 0.4,
+  ease: "power4",
+});
+gsap.from(".featured__sub__header", {
+  scrollTrigger: ".featured",
   y: 50,
   opacity: 0,
   duration: 0.8,
@@ -195,37 +203,22 @@ gsap.from(".project__title", {
   ease: "power4",
 });
 
-gsap.from(".project-1", {
-  scrollTrigger: ".project",
-  y: 50,
+gsap.from(".featured__container", {
+  scrollTrigger: ".featured",
+  x: -20,
   opacity: 0,
-
-  delay: 0.5,
-  ease: "power4",
-});
-gsap.from(".project-2", {
-  scrollTrigger: ".project",
-  y: 50,
-  opacity: 0,
-
-  delay: 0.55,
-  ease: "power4",
-});
-gsap.from(".project-3", {
-  scrollTrigger: ".project",
-  y: 50,
-  opacity: 0,
-
   delay: 0.6,
   ease: "power4",
+  zIndex: 1000,
 });
-gsap.from(".project-4", {
-  scrollTrigger: ".project",
-  y: 50,
-  opacity: 0,
 
-  delay: 0.65,
+gsap.from(".featured__container--2", {
+  scrollTrigger: ".featured",
+  x: 20,
+  opacity: 0,
+  delay: 0.6,
   ease: "power4",
+  zIndex: 1000,
 });
 
 gsap.from(".contact__container", {
