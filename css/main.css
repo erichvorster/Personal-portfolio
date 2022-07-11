@@ -1176,6 +1176,15 @@ form .action input[type="reset"] {
   transition: background-color 0.2s ease-in-out;
 }
 
+.recaptcha {
+  padding-bottom: 12px;
+  overflow-y: hidden;
+}
+
+.recaptcha div {
+  overflow-y: hidden;
+}
+
 @media (max-width: 768px) {
   form .half {
     -webkit-box-orient: vertical;
