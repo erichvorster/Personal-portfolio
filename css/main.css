@@ -19,7 +19,6 @@
 }
 
 li {
-  list-style: none;
   text-decoration: none;
 }
 
@@ -730,11 +729,15 @@ nav {
   display: -ms-flexbox;
   display: flex;
   margin-top: 1rem;
+  text-decoration: none;
+  list-style: none;
 }
 
 .feature__technologies ol li {
   margin-left: 1rem;
   margin-right: 0.5rem;
+  text-decoration: none;
+  list-style: none;
 }
 
 .featured__icon {
@@ -838,6 +841,8 @@ nav {
     margin-right: 2rem;
     font-size: 14px;
     color: #ffeeb4;
+    text-decoration: none;
+    list-style: none;
   }
   .feature__technologies ol {
     display: -webkit-box;
@@ -954,6 +959,8 @@ nav {
 .feature__technologies--2 ol li {
   margin-left: 1rem;
   margin-right: 0.5rem;
+  text-decoration: none;
+  list-style: none;
 }
 
 @media screen and (min-width: 576px) {

@@ -27,7 +27,6 @@ $xl: 1200px;
   font-size: 34px;
 }
 li {
-  list-style: none;
   text-decoration: none;
 }
 a {
@@ -651,9 +650,13 @@ nav {
   ol {
     display: flex;
     margin-top: 1rem;
+    text-decoration: none;
+    list-style: none;
     li {
       margin-left: 1rem;
       margin-right: 0.5rem;
+      text-decoration: none;
+      list-style: none;
     }
   }
 }
@@ -754,6 +757,8 @@ nav {
         margin-right: 2rem;
         font-size: 14px;
         color: $yellow;
+        text-decoration: none;
+        list-style: none;
       }
     }
 
@@ -859,6 +864,8 @@ nav {
     li {
       margin-left: 1rem;
       margin-right: 0.5rem;
+      text-decoration: none;
+      list-style: none;
     }
   }
 }
