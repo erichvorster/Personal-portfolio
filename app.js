@@ -54,95 +54,95 @@ window.addEventListener("scroll", () => {
 
 //Text animation
 
-gsap.from(".logo", {
+gsap.to(".logo", {
   duration: 0.5,
-  y: -30,
-  opacity: 0,
+  y: 10,
+  opacity: 1,
   ease: "power4",
   delay: 1,
 });
-gsap.from(".burger", {
+gsap.to(".burger", {
   duration: 0.5,
-  y: -30,
-  opacity: 0,
+  y: 10,
+  opacity: 1,
   ease: "power4",
   delay: 1.05,
 });
-gsap.from(".home__link", {
+gsap.to(".home__link", {
   duration: 0.5,
-  y: -30,
-  opacity: 0,
+  y: 10,
+  opacity: 1,
   ease: "power4",
   delay: 1.05,
 });
-gsap.from(".about__link", {
+gsap.to(".about__link", {
   duration: 0.5,
-  y: -30,
-  opacity: 0,
+  y: 10,
+  opacity: 1,
   ease: "power4",
   delay: 1.1,
 });
-gsap.from(".project__link", {
+gsap.to(".project__link", {
   duration: 0.5,
-  y: -30,
-  opacity: 0,
+  y: 10,
+  opacity: 1,
   ease: "power4",
   delay: 1.15,
 });
-gsap.from(".contact__link", {
+gsap.to(".contact__link", {
   duration: 0.5,
-  y: -10,
-  opacity: 0,
+  y: 10,
+  opacity: 1,
   ease: "power4",
   delay: 1.2,
 });
 
-gsap.from(".hero__content--firstname", {
+gsap.to(".hero__content--firstname", {
   duration: 0.5,
-  y: 50,
-  opacity: 0,
+  y: -50,
+  opacity: 1,
   ease: "power4",
   delay: 1.4,
   zIndex: 1,
 });
 
-gsap.from(".hero__content--header", {
+gsap.to(".hero__content--header", {
   duration: 0.5,
-  y: 50,
-  opacity: 0,
+  y: -50,
+  opacity: 1,
   delay: 1,
   ease: "power4",
   delay: 1.5,
   zIndex: 1,
 });
-gsap.from(".hero__content--paragraph", {
+gsap.to(".hero__content--paragraph", {
   duration: 0.5,
-  y: 50,
-  opacity: 0,
+  y: -50,
+  opacity: 1,
   delay: 1,
   ease: "power4",
   delay: 1.55,
   zIndex: 1,
 });
-gsap.from(".button-24", {
+gsap.to(".button-24", {
   duration: 0.5,
-  y: 50,
-  opacity: 0,
+  y: -50,
+  opacity: 1,
   delay: 1,
   ease: "power4",
   delay: 1.65,
   zIndex: 1,
 });
-gsap.from(".socails", {
+gsap.to(".socails", {
   duration: 0.5,
-  opacity: 0,
+  opacity: 1,
   delay: 1,
   ease: "power4",
   delay: 2,
 });
-gsap.from(".email", {
+gsap.to(".email", {
   duration: 0.5,
-  opacity: 0,
+  opacity: 1,
   delay: 1,
   ease: "power4",
   delay: 2,
@@ -151,7 +151,7 @@ gsap.from(".email", {
 ///About
 
 gsap.from(".about__header", {
-  scrollTrigger: ".about__grid",
+  scrollTrigger: ".about__image__container",
   y: 20,
   opacity: 0,
   duration: 0.8,
@@ -159,7 +159,7 @@ gsap.from(".about__header", {
   ease: "power4",
 });
 gsap.from(".about__content--1", {
-  scrollTrigger: ".about__grid",
+  scrollTrigger: ".about__image__container",
   y: 50,
   opacity: 0,
   duration: 0.8,
@@ -167,7 +167,7 @@ gsap.from(".about__content--1", {
   ease: "power4",
 });
 gsap.from(".about__content--2", {
-  scrollTrigger: ".about__grid",
+  scrollTrigger: ".about__image__container",
   y: 50,
   opacity: 0,
   duration: 0.8,
@@ -175,7 +175,7 @@ gsap.from(".about__content--2", {
   ease: "power4",
 });
 gsap.from(".technologies__header", {
-  scrollTrigger: ".about__grid",
+  scrollTrigger: ".about__image__container",
   y: 50,
   opacity: 0,
   duration: 0.8,
@@ -183,7 +183,7 @@ gsap.from(".technologies__header", {
   ease: "power4",
 });
 gsap.from(".technologies__container", {
-  scrollTrigger: ".about__grid",
+  scrollTrigger: ".about__image__container",
   y: 50,
   opacity: 0,
   duration: 0.8,
@@ -191,7 +191,7 @@ gsap.from(".technologies__container", {
   ease: "power4",
 });
 gsap.from(".about__image__container", {
-  scrollTrigger: ".about__grid",
+  scrollTrigger: ".about__image__container",
   opacity: 0,
   duration: 0.3,
   delay: 1.2,

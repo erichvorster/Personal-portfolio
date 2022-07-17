@@ -9,6 +9,7 @@ $sm: 576px;
 $md: 768px;
 $lg: 992px;
 $xl: 1200px;
+$xxl: 1600px;
 
 * {
   margin: 0px;
@@ -68,11 +69,11 @@ body::-webkit-scrollbar-thumb {
 
 nav {
   width: 100vw;
-  min-height: 12vh;
+  min-height: 8vh;
   display: flex;
   justify-content: space-between;
   font-family: "Poppins", sans-serif;
-  padding: 1.5rem 2rem;
+  padding: 0.2rem 3rem;
   background-color: #0f2830;
   transform: translateY(0vh);
 }
@@ -99,6 +100,8 @@ nav {
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 28px;
+  opacity: 0;
+  padding-bottom: 20px;
 }
 
 .nav-links {
@@ -117,6 +120,7 @@ nav {
   font-size: 16px;
   cursor: pointer;
   color: $grey;
+  opacity: 0;
 }
 
 .nav-links li:hover {
@@ -141,6 +145,7 @@ nav {
 .burger {
   display: none;
   cursor: pointer;
+  opacity: 0;
 }
 
 .burger div {
@@ -149,6 +154,20 @@ nav {
   margin: 5px;
   background-color: $yellow;
   transition: all 0.3s ease;
+}
+
+.home_link {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+.about_link {
+  opacity: 0;
+}
+.project_link {
+  opacity: 0;
+}
+.contact__link {
+  opacity: 0;
 }
 
 @media screen and(max-width:1024px) {
@@ -162,7 +181,7 @@ nav {
     position: absolute;
     z-index: 1000;
     right: 0px;
-    height: 88vh;
+    height: 92vh;
     top: 12vh;
     background-color: $green;
     display: flex;
@@ -229,6 +248,7 @@ nav {
     overflow-y: hidden;
     position: relative;
     z-index: -1;
+    padding-top: 5rem;
 
     .hero__content--firstname {
       overflow-y: hidden;
@@ -236,21 +256,25 @@ nav {
       padding-bottom: 0.5rem;
       font-size: clamp(20px, 10vw, 80px);
       padding-top: 1rem;
+      opacity: 0;
     }
     .hero__content--header {
       color: $yellow;
       max-width: 60rem;
       overflow: hidden;
       font-size: clamp(30px, 5vw, 60px);
+      opacity: 0;
     }
     .hero__content--paragraph {
       color: white;
       max-width: 30rem;
       line-height: 1.5rem;
       font-size: 14px;
+      opacity: 0;
     }
     p {
       color: white;
+      opacity: 0;
     }
 
     .button-24 {
@@ -280,6 +304,7 @@ nav {
       transition: background-color 0.2s ease-in-out;
       position: relative;
       z-index: 9999;
+      opacity: 0;
     }
 
     .button-24:hover,
@@ -349,6 +374,9 @@ nav {
   .hero {
     max-width: 80rem;
   }
+  .hero__content {
+    padding-top: 4rem;
+  }
 
   .hero__content--header {
     line-height: 3rem;
@@ -363,10 +391,16 @@ nav {
   }
   .hero__content {
     margin-left: 5rem;
+    margin-top: 2rem;
   }
 
   .hero__content--header {
     line-height: 5rem;
+  }
+}
+@media screen and (min-width: $xxl) {
+  .hero__content {
+    margin-top: 8rem;
   }
 }
 
@@ -1165,7 +1199,10 @@ form .action input[type="reset"] {
 .socail {
   position: fixed;
   bottom: 6rem;
-  left: 1rem;
+  left: 2.5rem;
+}
+.socails {
+  opacity: 0;
 }
 .socails li {
   height: 2.5rem;
@@ -1174,6 +1211,7 @@ form .action input[type="reset"] {
   overflow: hidden;
   margin: 0.5rem 0;
   display: none;
+
   i {
     position: absolute;
     top: 1rem;
@@ -1194,7 +1232,7 @@ form .action input[type="reset"] {
   width: 2px;
   background-color: #6e5494;
   bottom: 0rem;
-  left: 2.5rem;
+  left: 4rem;
   display: none;
 }
 .lines2 {
@@ -1203,7 +1241,7 @@ form .action input[type="reset"] {
   width: 2px;
   background-color: #6e5494;
   bottom: 0rem;
-  right: 2.5rem;
+  right: 4rem;
   display: none;
 }
 
@@ -1212,13 +1250,14 @@ form .action input[type="reset"] {
   position: fixed;
   background-color: #6e5494;
   bottom: 11rem;
-  right: -3rem;
+  right: -1.5rem;
   background-color: transparent;
   color: $purple;
   transition: all 0.2s ease;
   display: none;
   font-size: 14px;
   cursor: pointer;
+  opacity: 0;
 }
 .email:hover {
   transform: translateY(-5px);
