@@ -34,7 +34,6 @@
   <body>
     <!--NAV-->
     <section class="navs">
-      
         <nav>
           <div class="logo">
             <h4>EV</h4>
@@ -52,6 +51,11 @@
             <li class="contact__link">
               <a href="#contact"><span class="number-span">04.</span>Contact</a>
             </li>
+            <li class="resume">
+              <a href="./assets/cv/Resume.pdf">
+                <button class="button-resume" >Resume</button>
+              </a>
+            </li>
           </ul>
           <div class="burger">
             <div class="line1"></div>
@@ -67,13 +71,13 @@
     <div class="container" id="hero" >
       <div class="hero">
         <div class="hero__content">
+          <h5 class="hero__intro">Hi, my name is</h5>
           <h1 class="hero__content--firstname">Erich Vorster</h1>
           <h3 class="hero__content--header">
-            I am a self taught front end developer.
+            I am a front-end developer passionate about building beautiful user interfaces.
           </h3>
           <p class="hero__content--paragraph">
-            Its been almost 2 years since I printed my first hello world into
-            the console and I am glad to say have not looked back since.
+            Well-versed in HTML, CSS, and JavaScript as well as front-end frameworks including React and jQuery. Based in South Africa.
           </p>
           <a href="#contact">
             <button class="button-24" role="button">Get in touch</button>
@@ -86,7 +90,7 @@
     <div class="container" id="about">
       <div class="about">
         <div class="about__header">
-          <h3><span class="number-span-header">01. </span>About me</h3>
+          <h3><span class="number-span-header">01. </span>About Me</h3>
         </div>
         <div class="about__grid">
           <div class="about__col--1">
@@ -97,27 +101,36 @@
                 something in programming.
               </p>
               <p class="about__content--2">
-                I am a self-taught front-end developer with a passion for all things JavaScript. It's been almost 2 years since I printed my first “Hello world” into the console and I have not looked back since. I am passionate about learning new technologies and enjoy staying up to date with the latest software development trends. I am currently busy building on my knowledge of React as well as data structures and algorithms.
+                I am a self-taught front-end developer with a passion for all things JavaScript. I love learning new technologies and staying up to date with the latest software development trends. Currently busy with development in React, Next.js as well as TypeScript.
               </p>
+
             </div>
             <h3 class="technologies__header">
-              Technologies i have recently used:
+              Technologies & Libraries I Work With:
             </h3>
             <div class="technologies__container">
               <div class="technologies-1">
                 <ul>
-                  <li>JavaScript-ES6</li>
+                  <li>JavaScript</li>
                   <li>React</li>
-                  <li>JQuery</li>
-                  <li>CSS3/SASS</li>
+                  <li>Next.js</li>
+                  <li>jQuery</li>
                 </ul>
               </div>
               <div class="technologies-2">
                 <ul>
                   <li>HTML5</li>
+                  <li>CSS3/SASS</li>
                   <li>Bootstrap</li>
                   <li>TailwindCSS</li>
+                </ul>
+              </div>
+              <div class="technologies-3">
+                <ul>
                   <li>Material UI</li>
+                  <li>Semantic UI</li>
+                  <li>Framer</li>
+                  <li>GSAP</li>
                 </ul>
               </div>
             </div>
@@ -135,16 +148,43 @@
     <div class="container" id="projects">
       <div class="featured">
         <h3 class="featured__header">
-          <span class="number-span-header">02. </span>Some things I've built
+          <span class="number-span-header">02. </span>Some Things I've Built
         </h3>
-        <p class="featured__sub__header">Below are a few of my personal projects. The source code and some of my other work is available on <a href="https://github.com/erichvorster"><span class="span">Github</span></a></p>
+        <p class="featured__sub__header">Below are a few of my personal projects. The rest of my work is available on <a href="https://github.com/erichvorster"><span class="span">Github.</span></a></p>
+        <div class="featured__container--2">
+          <div class="featured__content__container--2">
+            <div class="featured__content--2 content-2">
+              <h6 class="project__span">Project 1</h6>
+              <h1>DStv Now Clone</h1>
+              <p>
+                A fully responsive clone of the popular South African TV streaming service built with the help of the <span href="https://www.themoviedb.org/" class="span">tmdb API</span>. The app is built with <a href="https://nextjs.org/"><span class="span">Next.js</span></a> and styled using <a href="https://tailwindcss.com/"><span class="span">Tailwind CSS</span></a>.
+              </p>
+              <div class="feature__technologies--2">
+                <ul>
+                  <li>Next.js</li>
+                  <li>Tailwind CSS</li>
+                  <li>Netlify</li>
+                </ul>
+                <ol>
+                  <li><a href="https://stunning-donut-f45f69.netlify.app"><i class="fa-solid fa-arrow-up-right-from-square featured__icon"></i></a></li>
+                  <li><a href="https://github.com/erichvorster/nextjs-dstv-clone"><i class="fa-brands fa-github featured__icon" ></i></a></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <a href="https://stunning-donut-f45f69.netlify.app">
+            <div class=" featured__img featured__img--2 img4"></div>
+          </a>
+        </div>
         <div class="featured__container">
           <a href="https://jocular-dusk-7ef7f0.netlify.app">
           <div class="featured__img img1"></div>
         </a>
           <div class="featured__content__container">
             <div class="featured__content content-1">
+              <h6 class="project__span">Project 1</h6>
               <h1>Cryptocurrency App</h1>
+             
               <p>
                 A fully responsive cryptocurrency app that includes live coin prices, statistics and news updates built with <a href="https://reactjs.org/"><span class="span">React</span></a> using function based components. The app also includes several graphs built the help of <a href="https://www.chartjs.org/"><span class="span">ChartJS</span></a>. I made use of the browsers built in fetch api to pull data from both the <a href="https://coinranking.com/"><span class="span">Coinranking</span></a> and <a href="https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/"><span class="span">Bing News</span></a> api's. The ui was built with <a href="https://mui.com/"><span class="span">Material UI</span></a>. 
               </p>
@@ -166,6 +206,7 @@
         <div class="featured__container--2">
           <div class="featured__content__container--2">
             <div class="featured__content--2 content-2">
+              <h6 class="project__span">Project 1</h6>
               <h1>Task Manager</h1>
               <p>
                 A fully responsive task manager built with <a href="https://reactjs.org/"><span class="span">React</span></a> and <a href="https://tailwindcss.com/"><span class="span">Tailwind CSS</span></a>. I made use of React function based components and react hooks to achieve CRUD operations. I also made use of <a href="https://www.framer.com/motion/"><span class="span">Framer Motion</span></a> to add a few animations.
@@ -190,6 +231,7 @@
         <div class="featured__container">
           <div class="featured__content__container">
             <div class="featured__content">
+              <h6 class="project__span">Project 1</h6>
               <h1>Internet Provider Website</h1>
               <p>
                 A fully responsive internet provider website built with <a href="https://getbootstrap.com/"><span class="span">Bootstrap 5</span></a> and <a href="https://sass-lang.com/"><span class="span">SASS</span></a>. I made use of flex box and CSS grid to achieve responsiveness. I also made use of <a href="https://greensock.com/gsap/"><span class="span">GSAP</span></a> animation library to include some animation.
@@ -222,10 +264,9 @@
     <div class="container" id="contact">
       <div class="contact__container">
         <div class="title">
-          <h2><span class="number-span-header">03. </span>Contact</h2>
+          <h2><span class="number-span-header">03. </span>Get In Touch</h2>
           <p>
-            Please feel free to get in touch. I am always looking for new
-            opportunities
+            Please feel free to get in touch. I am currently seeking roles that will allow me to learn and grow within a collaborative team environment. 
           </p>
         </div>
         <form  method="POST" data-netlify="true" class="form" id="form">
@@ -248,7 +289,6 @@
           </div>
           <div class="action">
             <input type="submit" value="Send" />
-            <input type="reset" value="Reset" />
           </div>
 
           <div class="icons"></div>

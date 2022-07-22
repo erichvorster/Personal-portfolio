@@ -68,6 +68,7 @@ gsap.to(".burger", {
   ease: "power4",
   delay: 1.05,
 });
+
 gsap.to(".home__link", {
   duration: 0.5,
   y: 10,
@@ -95,6 +96,21 @@ gsap.to(".contact__link", {
   opacity: 1,
   ease: "power4",
   delay: 1.2,
+});
+gsap.to(".resume", {
+  duration: 0.5,
+  y: 10,
+  opacity: 1,
+  ease: "power4",
+  delay: 1.2,
+});
+
+gsap.to(".hero__intro", {
+  duration: 0.5,
+  y: -50,
+  opacity: 1,
+  ease: "power4",
+  delay: 1.3,
 });
 
 gsap.to(".hero__content--firstname", {
